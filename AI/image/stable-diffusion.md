@@ -22,3 +22,23 @@
 
 Diffusion 模型的目标函数即是学习高斯噪声∈t和∈0(来自模型输出) 之间的 MSE loss
 
+{% tabs %}
+{% tab title="Mask Blur" %}
+蒙版羽化：控制遮罩图像的模糊程度，值在 0-64 之间调节
+
+
+
+数值较小的时候，边缘越锐利，数值一般默认4即可
+
+对于更换背景图这样的场景，一般建议设置为0
+{% endtab %}
+
+{% tab title="Mask content" %}
+在 Denoising 足够大时，使用latent noise更能体现 prompt
+
+| latent noise             | latent nothing           |
+| ------------------------ | ------------------------ |
+| 潜在噪声                     | 无潜在空间                    |
+| Mask flur 偏大时，背景会侵蚀到人物身上 | Mask flur 偏大时，背景会侵蚀到人物身上 |
+{% endtab %}
+{% endtabs %}
