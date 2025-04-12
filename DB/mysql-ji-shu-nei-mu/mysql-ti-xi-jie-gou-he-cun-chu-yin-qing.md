@@ -42,7 +42,7 @@
 
 通过内存的速度来弥补磁盘速度较慢的影响
 
-<table data-header-hidden><thead><tr><th width="116.6666259765625">opt</th><th></th></tr></thead><tbody><tr><td>读取页</td><td><p>将从磁盘读到的页存放在缓冲池中（"FIX"）</p><p></p><p>再次读取相同页时，先判断该页是否在缓冲池中，如果在则命中，否则读磁盘</p></td></tr><tr><td>修改页</td><td>先修改在缓冲池中的页，再以一定的频率刷新到磁盘上（Checkpoint）</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="116.6666259765625">opt</th><th></th></tr></thead><tbody><tr><td>读取页</td><td><p>将磁盘数据页（包括聚集索引和非聚集索引）从磁盘读到的页存放在缓冲池中</p><p></p><p>再次读取相同页时，先判断该页是否在缓冲池中，如果在则命中，否则读磁盘</p></td></tr><tr><td>修改页</td><td>先修改在缓冲池中的页，再以一定的频率刷新到磁盘上（Checkpoint）</td></tr></tbody></table>
 
 <details>
 

@@ -24,7 +24,7 @@
 
 </details>
 
-<table><thead><tr><th width="159.66668701171875"></th><th width="234.666748046875"></th><th></th></tr></thead><tbody><tr><td></td><td>聚集索引</td><td>非聚集索引</td></tr><tr><td>主键查询/物理存储</td><td>直接定位数据页（O(1) I/O）</td><td>需要二次回表查询（主键→数据页）</td></tr><tr><td>范围查询</td><td>顺序读取磁盘，效率高</td><td>离散读取，需要多次回表（多次I/O）</td></tr><tr><td></td><td></td><td>包含查询所需字段时可避免回表</td></tr><tr><td>插入性能</td><td>可能导致页分裂</td><td>仅更新索引树，开销较小</td></tr></tbody></table>
+<table><thead><tr><th width="159.66668701171875"></th><th width="234.666748046875">聚集索引</th><th>非聚集索引</th></tr></thead><tbody><tr><td>主键查询/物理存储</td><td>直接定位数据页（O(1) I/O）</td><td>需要二次回表查询（主键→数据页）</td></tr><tr><td>范围查询</td><td>顺序读取磁盘，效率高</td><td>离散读取，需要多次回表（多次I/O）</td></tr><tr><td></td><td></td><td>包含查询所需字段时可避免回表</td></tr><tr><td>插入性能</td><td>可能导致页分裂</td><td>仅更新索引树，开销较小</td></tr></tbody></table>
 
 <details>
 
@@ -34,3 +34,29 @@
 * 但分裂频率上升40%（严重影响高并发写入）
 
 </details>
+
+## 联合索引
+
+## 覆盖索引
+
+<details>
+
+<summary>count(1)、count(*) 与 count(column)</summary>
+
+<table><thead><tr><th width="149.33331298828125">covering index</th><th>effect</th><th>null</th></tr></thead><tbody><tr><td>count(*)</td><td>忽略列，用1代表行</td><td>包含NULL值</td></tr><tr><td>count(1)</td><td>所有列(行数)</td><td>包含NULL值</td></tr><tr><td>count(column)</td><td>只包括列名那一列</td><td>忽略NULL</td></tr></tbody></table>
+
+COUNT(\*) 通常是最快的方式，因为它不需要读取任何列的数据，只需计算行数
+
+</details>
+
+## 优化器选择不使用索引的情况
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
