@@ -2,6 +2,14 @@
 
 <details>
 
+<summary>MVCC</summary>
+
+
+
+</details>
+
+<details>
+
 <summary>为什么推荐自增主键</summary>
 
 1. 无序数据必须分裂页
