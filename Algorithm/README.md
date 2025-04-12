@@ -4,12 +4,10 @@ description: 山重水复疑无路，柳暗花明又一村
 
 # Algorithm
 
-## 框架
+## 结构
 
-<details>
-
-<summary>链表遍历</summary>
-
+{% tabs %}
+{% tab title="链表" %}
 ```go
 type ListNode struct {
     val int
@@ -46,31 +44,26 @@ for head != null {
 }
 ```
 
-</details>
 
-<details>
+{% endtab %}
 
-<summary>树遍历</summary>
+{% tab title="树" %}
+二叉树
 
-```go
-type TreeNode struct {
+<pre class="language-go"><code class="lang-go">type TreeNode struct {
     val int
     left, right *TreeNode
 }
-```
 
-二叉树
-
-```go
-func traverse(root *TreeNode) {
-    // 前序遍历
+<strong>func traverse(root *TreeNode) {
+</strong>    // 前序遍历
     traverse(root.left);
     // 中序遍历
     traverse(root.right);
     // 后序遍历
 }
 
-```
+</code></pre>
 
 N叉树
 
@@ -86,6 +79,23 @@ func traverse(root *TreeNode) {
     }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-</details>
+## 框架
 
+{% tabs %}
+{% tab title="回溯" %}
+```python
+result = []
+def backtrack(path, choice):
+    if ...:
+        result.append(path)
+        return
+    for c in choice:
+        选择
+        backtrack(paht, choice)
+        撤销选择
+```
+{% endtab %}
+{% endtabs %}
