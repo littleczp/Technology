@@ -38,6 +38,8 @@
 
 ### 内存
 
+#### 缓冲池
+
 通过内存的速度来弥补磁盘速度较慢的影响
 
 <table data-header-hidden><thead><tr><th width="116.6666259765625">opt</th><th></th></tr></thead><tbody><tr><td>读取页</td><td><p>将从磁盘读到的页存放在缓冲池中（"FIX"）</p><p></p><p>再次读取相同页时，先判断该页是否在缓冲池中，如果在则命中，否则读磁盘</p></td></tr><tr><td>修改页</td><td>先修改在缓冲池中的页，再以一定的频率刷新到磁盘上（Checkpoint）</td></tr></tbody></table>
@@ -50,7 +52,7 @@ LRU，midpoint 位置（<mark style="color:red;">5/8</mark>）处：直接将读
 
 </details>
 
-#### Insert Buffer
+#### Insert Buffer（不属于缓冲池）
 
 只有辅助索引需要使用插入缓冲，同时整个辅助索引不能包含唯一字段（离散读取）
 
@@ -66,7 +68,7 @@ CREATE TABLE t (
 
 如果没有设置主键，则会找到其中一个唯一的列构建（如果没有就用隐藏列）
 
-页中的记录按照a的值进行顺序存放：**顺序插入，不需要磁盘的随机读取**
+页中的记录按照a的值进行顺序存放：**顺序插入（逻辑上连续），不需要磁盘的随机读取**
 {% endtab %}
 
 {% tab title="Secondary Index" %}
