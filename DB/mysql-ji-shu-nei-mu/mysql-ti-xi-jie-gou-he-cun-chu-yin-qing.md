@@ -94,9 +94,9 @@ CREATE TABLE t (
 
 对缓冲池的脏页进行刷新时，并不直接写磁盘，而是通过memcpy（memory copy）函数将脏页先复制到内存中的Double Write Buffer。接着通过Double Write Buffer再分两次，每次1MB顺序地写入共享表空间的物理磁盘上
 
-
-
+{% hint style="info" %}
 如果在写入磁盘过程中发生了崩溃，在恢复过程中InnoDB可以从共享表空间中的Double Write中找到该页的一个副本，将其复制到表空间文件，再应用重做日志
+{% endhint %}
 
 <details>
 
