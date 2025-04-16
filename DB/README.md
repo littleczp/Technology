@@ -35,7 +35,7 @@
 
 <summary>分布式事务</summary>
 
-
+1. 两段式 / 三段式提交
 
 </details>
 
@@ -56,3 +56,12 @@
 UUID占用空间更多（16字节），BigINT（8字节）
 
 </details>
+
+<details>
+
+<summary>主从结构</summary>
+
+
+
+</details>
+
