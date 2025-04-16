@@ -69,6 +69,25 @@
 
 <details>
 
+<summary>慢查询优化</summary>
+
+1. 分析语句，是否加载了额外数据，查询了不必要的列等等
+2. 分析执行计划：type & extra，修改语句或者索引
+
+* type：判断sql性能和优化程度的重要指标
+
+<table><thead><tr><th width="193">type</th><th>desc</th></tr></thead><tbody><tr><td>const</td><td>通过索引一次命中，匹配一行数据</td></tr><tr><td>eq_ref</td><td>唯一性索引扫描，只有一条记录</td></tr><tr><td>ref</td><td>非唯一性索引扫描，返回匹配某个值的所有</td></tr><tr><td>range</td><td>使用其中一个索引来选择行</td></tr><tr><td>index</td><td>遍历索引树</td></tr><tr><td>ALL</td><td>全表扫描</td></tr></tbody></table>
+
+* extra
+
+<table><thead><tr><th width="180.3333740234375">extra</th><th>desc</th></tr></thead><tbody><tr><td>using filesort</td><td>对结果集进行了外部排序，不能通过索引达到排序效果</td></tr><tr><td>using index</td><td>覆盖索引扫描，性能佳</td></tr><tr><td>using temoporary</td><td>使用临时表，多为排序、分组、多表join的情况，建议优化</td></tr><tr><td>using where</td><td>使用了where过滤，效率较高</td></tr></tbody></table>
+
+3. 如果是数据量太大，考虑垂直拆分，水平拆分表
+
+</details>
+
+<details>
+
 <summary>为什么推荐自增主键 / 为什么用整形（BIGINT）不用UUID？</summary>
 
 1. 无序数据必须分裂页
@@ -82,13 +101,5 @@
    4. 空间紧凑：页填充率通常更高（页填充率15/16，当页剩余空间<1/16时触发分裂机制）
 
 UUID占用空间更多（16字节），BigINT（8字节）
-
-</details>
-
-<details>
-
-<summary></summary>
-
-
 
 </details>
