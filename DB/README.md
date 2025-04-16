@@ -10,6 +10,22 @@
 
 <details>
 
+<summary>可重复读（<strong>Repeatable Read</strong>）和幻读<strong>（Phantom Read）</strong>？</summary>
+
+可重复读：事务内**多次读取同一数据**的结果一致（即使其他事务已修改并提交）
+
+* **MVCC机制**：事务首次读时生成**ReadView**，后续读沿用该视图。但快照读无法阻止其他事务插入新数据，所以不能解决幻读
+
+幻读：事务内**两次相同条件查询**，结果集行数不同（侧重<mark style="color:red;">结果集</mark>变化）
+
+* 使用临键锁：行锁+间隙锁（左开右闭）+ MVCC解决幻读
+* 查询为for update，需要有索引，否则间隙锁会失效，降级为表锁\
+
+
+</details>
+
+<details>
+
 <summary>为什么推荐自增主键 / 为什么用整形（BIGINT）不用UUID？</summary>
 
 1. 无序数据必须分裂页
