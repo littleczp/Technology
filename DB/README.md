@@ -19,7 +19,22 @@
 幻读：事务内**两次相同条件查询**，结果集行数不同（侧重<mark style="color:red;">结果集</mark>变化）
 
 * 使用临键锁：行锁+间隙锁（左开右闭）+ MVCC解决幻读
-* 查询为for update，需要有索引，否则间隙锁会失效，降级为表锁\
+* 查询为for update，需要有索引，否则间隙锁会失效，降级为表锁；如果索引有唯一属性，InnoDB会优化为行锁
+
+</details>
+
+<details>
+
+<summary>事务ACID</summary>
+
+<table><thead><tr><th width="119.33331298828125">ACID</th><th>Desc</th><th>实现</th></tr></thead><tbody><tr><td>Ａ，原子性</td><td>事务全做或者全不做</td><td>Undo Log，记录回滚信息</td></tr><tr><td>C，一致性</td><td>在事务开始前和事务结束后，数据库的完整性约束没有被破坏（回滚后回到初始化的状态）</td><td>主键/外键约束、触发器、应用层校验</td></tr><tr><td>I，隔离性</td><td>并发事务互不干扰</td><td>临键锁 + MVCC</td></tr><tr><td>D，持久性</td><td>提交后数据永久保存</td><td>Buffer Pool + Redo Log</td></tr></tbody></table>
+
+</details>
+
+<details>
+
+<summary>分布式事务</summary>
+
 
 
 </details>
@@ -41,4 +56,3 @@
 UUID占用空间更多（16字节），BigINT（8字节）
 
 </details>
-
