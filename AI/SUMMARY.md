@@ -10,6 +10,10 @@
 
 * [Agent](agent/agent.md)
 
+***
+
+* [Agent训练](agent-xun-lian.md)
+
 ## Image
 
 * [Stable Diffusion](image/stable-diffusion.md)
