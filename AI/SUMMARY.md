@@ -6,6 +6,10 @@
 
 * [llm](llm/llm.md)
 
+## Agent
+
+* [Agent](agent/agent.md)
+
 ## Image
 
 * [Stable Diffusion](image/stable-diffusion.md)
