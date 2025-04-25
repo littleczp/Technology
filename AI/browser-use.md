@@ -31,25 +31,48 @@ ANTHROPIC_API_KEY=...
 
 ## Demo
 
-```
+```python
+import os
+# Disable telemetry
+os.environ["ANONYMIZED_TELEMETRY"] = "false"
+
 import asyncio
 
-from langchain_openai import ChatOpenAI
+from langchain_deepseek import ChatDeepSeek
 from browser_use import Agent
 from dotenv import load_dotenv
+from pydantic import SecretStr
+
+# Disable telemetry before importing browser_use
 
 load_dotenv()
 
-llm = ChatOpenAI(model="gpt-4o")
+api_key = os.getenv('DEEPSEEK_API_KEY', '')
+if not api_key:
+    raise ValueError('DEEPSEEK_API_KEY is not set')
+
 
 async def main():
     agent = Agent(
-        task="打开 https://google.com，搜索browser use并找到它的官网",
-        llm=llm,
+        task=(
+            '1. Go to https://www.google.com '
+            "2. Search for 'browser use' in the search bar"
+            '3. Click on first result'
+            '4. Return the page source'
+        ),
+        llm=ChatDeepSeek(
+            base_url='https://api.deepseek.com/v1',
+            model='deepseek-chat',
+            api_key=SecretStr(api_key),
+        ),
+        use_vision=False,
     )
-    result = await agent.run()
-    print(result)
+
+    res = await agent.run()
+    print(res)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 ```
