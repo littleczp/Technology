@@ -12,7 +12,7 @@
 
 ***
 
-* [Agent训练](agent-xun-lian.md)
+* [Browser Use](browser-use.md)
 
 ## Image
 
