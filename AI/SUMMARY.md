@@ -5,6 +5,7 @@
 ## LLM
 
 * [llm](llm/llm.md)
+* [RAG](llm/rag.md)
 
 ## Agent
 
