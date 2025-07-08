@@ -4,7 +4,7 @@ description: Attention is All You Need
 
 # Transformer 架构
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="" width="563"><figcaption><p>原始 Transformer 模型架构</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption><p>原始 Transformer 模型架构</p></figcaption></figure>
 
 左侧是6层的编码器堆叠，右侧是6层的解码器堆叠。
 
@@ -15,3 +15,19 @@ description: Attention is All You Need
 注意力取代了随着两个单词的距离增加而需要增加参数的循环函数（RNN）。它是“单词到单词”的操作，即 token 到 token（词元）的操作。注意力机制将找出每个单词与序列中所有单词的相关性。
 
 > 注意力将单词向量进行**点积操作**以得出一个单词与所有单词的关系，包括与自身的关系
+>
+>
+>
+> 点积操作：先求两数字序列中每组对应元素的积，再求所有积之和，结果即&#x4E3A;_&#x70B9;积_
+
+
+
+原始 Transformer 模型的编码器由结构相同的 6 层堆叠而成（N=6）。
+
+每层以这两个子层为主：一个多头注意力子层和一个前馈神经网络子层。每一个子层周围都有一条指向层规范化的残差连接，这些连接将子层的未处理输入 x 传给层规范化函数（确保位置编码等关键信息不会在中途丢失），规范化输出为：输出都有一个很定的纬度d<sub>model</sub>=512
+
+$$
+LayerNormalization(x+Sublayer(x))
+$$
+
+每层先从前一层学习，然后从不同角度探索序列中词元的相关性
