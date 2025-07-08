@@ -34,4 +34,5 @@
 
 ***
 
-* [Transformer模型架构入门](transformer-mo-xing-jia-gou-ru-men.md)
+* [Transformer模型架构入门](transformer-mo-xing-jia-gou-ru-men/README.md)
+  * [Transformer 架构](transformer-mo-xing-jia-gou-ru-men/transformer-jia-gou.md)
