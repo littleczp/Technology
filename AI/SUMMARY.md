@@ -37,3 +37,4 @@
 * [Transformer模型架构入门](transformer-mo-xing-jia-gou-ru-men/README.md)
   * [Transformer 架构](transformer-mo-xing-jia-gou-ru-men/transformer-jia-gou.md)
   * [Hugging Face 的 Transformer 模型](transformer-mo-xing-jia-gou-ru-men/hugging-face-de-transformer-mo-xing.md)
+* [微调BERT模型](wei-tiao-bert-mo-xing.md)
