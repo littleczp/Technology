@@ -9,3 +9,7 @@
 ## Lumi AI
 
 * [环境准备](lumi-ai/huan-jing-zhun-bei.md)
+
+***
+
+* [飞行记录](fei-xing-ji-lu.md)
