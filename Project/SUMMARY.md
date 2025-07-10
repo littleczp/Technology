@@ -8,4 +8,4 @@
 
 ## Lumi AI
 
-* [Page 2](lumi-ai/page-2.md)
+* [环境准备](lumi-ai/huan-jing-zhun-bei.md)
