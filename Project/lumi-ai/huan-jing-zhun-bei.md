@@ -60,9 +60,6 @@ whisperx
 mkdir -p ~/lumi-ai/app/services/models
 mkdir -p ~/autodl-tmp/models/ASR && mkdir -p ~/autodl-tmp/models/LLM
 
-sudo apt update
-sudo apt install aria2
-
 cd ~/autodl-tmp/models/ASR
 aria2c -x 16 https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth
 aria2c -x 16 https://github.com/m-bain/whisperX/raw/a83ddbdf9ba29278cd6de50f2d735df3cd3984b1/models/pytorch_model.bin
