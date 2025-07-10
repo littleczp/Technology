@@ -15,4 +15,8 @@ translator = pipeline(
     model="Helsinki-NLP/opus-mt-en-fr"
 )
 print(translator("It is easy to translate languages with transformers"))
+
+# 过滤掉特定警告（可选）
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 ```
