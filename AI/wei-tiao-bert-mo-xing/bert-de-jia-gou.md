@@ -14,7 +14,7 @@ BERT 只使用了 Transformer 编码器部分，没有使用解码器部分。BE
 The cat sat on it because it was a nice rug.
 ```
 
-假设当前位置为单词it，则编码器的输入为：
+假设当前位置为单词 it，则编码器的输入为：
 
 ```
 The cat sat on it<masked sequence>
