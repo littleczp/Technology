@@ -42,7 +42,11 @@ $$
 
 输入嵌入子层将输入词元转换为维度 d<sub>model</sub>=512 的特征向量。工作方式为：<mark style="color:blue;">通过词元分析器（tokenizer）将句子拆分为词元</mark>。词元化方法包括 BPE（原始 Transformer 使用）、WordPiece 和 SentencePiece
 
-假设嵌入句子：The black cat sat on the couch and the brown dog slept on the rug.
+假设嵌入句子：
+
+```
+The black cat sat on the couch and the brown dog slept on the rug.
+```
 
 black 和 brown 这两个词的嵌入向量应该是相似的，black 向量：
 
