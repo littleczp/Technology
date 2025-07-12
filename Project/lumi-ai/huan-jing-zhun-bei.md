@@ -28,7 +28,12 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 ```sh
 pip install --upgrade pip setuptools wheel
 
-pip install -r requirements.txt --use-deprecated=legacy-resolver
+# 国内
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+pip install -r requirements.txt
+pip install -r requirements_module.txt
+
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ```
 {% endcode %}
