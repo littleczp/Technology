@@ -35,7 +35,7 @@ pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https
 
 ### FFMPEG
 
-{% code overflow="wrap" fullWidth="true" %}
+{% code overflow="wrap" fullWidth="false" %}
 ```sh
 conda install ffmpeg==7.0.2 -c conda-forge
 
@@ -66,3 +66,4 @@ aria2c -x 16 https://github.com/m-bain/whisperX/raw/a83ddbdf9ba29278cd6de50f2d73
 ln -s ~/autodl-tmp/models/ASR ~/lumi-ai/app/services/models
 ```
 {% endcode %}
+
