@@ -31,9 +31,10 @@ pip install --upgrade pip setuptools wheel
 # 国内
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
-pip install -r requirements.txt
 # 通过子模块的 setup.py 安装包
 pip install -r requirements_module.txt
+# 有一些子模块的包版本要替换，ctranslate2
+pip install -r requirements.txt
 
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ```
