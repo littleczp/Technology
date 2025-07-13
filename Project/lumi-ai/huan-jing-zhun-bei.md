@@ -32,6 +32,7 @@ pip install --upgrade pip setuptools wheel
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
 pip install -r requirements.txt
+# 通过子模块的 setup.py 安装包
 pip install -r requirements_module.txt
 
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
