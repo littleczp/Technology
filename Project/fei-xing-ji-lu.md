@@ -49,6 +49,7 @@ import os
 
 from modelscope import snapshot_download
 
+# https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f
 snapshot_download('qwen/Qwen3-4B',
                   local_dir=f'{os.path.join(BASE_DIR, "app", "services", "models", "LLM", "Qwen3-4B")}')
 ```
