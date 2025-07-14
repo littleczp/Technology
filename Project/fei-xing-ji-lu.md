@@ -1,6 +1,6 @@
 # 飞行记录
 
-Q是Shell
+Shell
 
 {% code overflow="wrap" %}
 ```sh
