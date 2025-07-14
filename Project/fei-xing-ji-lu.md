@@ -16,6 +16,16 @@ pm2 start uvicorn --name lumi-ai --interpreter /.../miniconda3/envs/lumi-ai/bin/
 ```
 {% endcode %}
 
+## 优化
+
+<details>
+
+<summary>whisperx</summary>
+
+1. 避免免内存溢出：调整batch\_size=8、chunk\_length=30（每30秒分段）
+
+</details>
+
 ## 报错
 
 <details>
