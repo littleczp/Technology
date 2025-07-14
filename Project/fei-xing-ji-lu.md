@@ -1,6 +1,6 @@
 # 飞行记录
 
-Shell
+Q是Shell
 
 {% code overflow="wrap" %}
 ```sh
@@ -39,7 +39,65 @@ pm2 start uvicorn --name lumi-ai --interpreter /.../miniconda3/envs/lumi-ai/bin/
 
 </details>
 
-##
+<details>
+
+<summary>升级Qwen模型</summary>
+
+{% code overflow="wrap" %}
+```python
+import os
+
+from modelscope import snapshot_download
+
+snapshot_download('qwen/Qwen3-4B',
+                  local_dir=f'{os.path.join(BASE_DIR, "app", "services", "models", "LLM", "Qwen3-4B")}')
+```
+{% endcode %}
+
+{% code overflow="wrap" %}
+```python
+text = tokenizer.apply_chat_template(
+        msg,
+        tokenize=False,
+        add_generation_prompt=True,
+        enable_thinking=False
+    )
+
+    generation_config = {
+        "max_new_tokens": 512,
+        "do_sample": False,
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "repetition_penalty": 1.05,
+        "pad_token_id": tokenizer.eos_token_id,
+        "eos_token_id": tokenizer.eos_token_id,
+    }
+
+    with torch.no_grad():
+        model_inputs = tokenizer([text], return_tensors="pt").to("cuda")
+
+        generated_ids = tokenizer_model.generate(
+            model_inputs.input_ids,
+            attention_mask=model_inputs.attention_mask,
+            **generation_config
+        )
+
+        generated_ids = [
+            output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+        ]
+
+        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+
+        # 后处理：移除可能的多余空格和换行
+        response = ' '.join(response.split())
+
+        return response
+```
+{% endcode %}
+
+</details>
+
+***
 
 ## 报错
 
