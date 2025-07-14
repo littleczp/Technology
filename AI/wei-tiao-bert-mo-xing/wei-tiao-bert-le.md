@@ -64,3 +64,74 @@ validation_masks = torch.tensor(validation_masks)
 
 ***
 
+## 选择批量大小并创建迭代器
+
+```python
+batch_size = 32
+```
+
+***
+
+## BERT 模型配置
+
+```python
+from transformers import BertModel, BertConfig
+
+configuration = BertConfig()
+# init
+model = BertModel(configuration)
+
+config = model.config
+print(config)
+```
+
+***
+
+## 加载 Hugging Face BERT uncased base 模型
+
+```python
+model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
+model = nn.DataParallel(model)
+model.to(device)
+```
+
+***
+
+## 优化器分组参数
+
+在进行模型微调的过程中，首先需要初始化预训练模型已学到的参数值
+
+{% hint style="success" %}
+微调一个预训练模型时，通常会使用已训练好的模型作为初始模型。因为它经过大量数据和计算资源训练，学到了很多有用的特征表示和参数权重
+
+所以会使用预训练模型的参数值来初始化优化器，以便于在微调过程中更好地利用已经学到的参数，加快模型收敛速度并提高微调效果
+{% endhint %}
+
+{% code overflow="wrap" %}
+```python
+param_optimizer = list(model.named_parameters())
+# the BERT 没有 "gamma" or "beta" parameters, only "bias"
+no_decay = ["bias", "LayerNorm.weight"]
+...
+```
+{% endcode %}
+
+***
+
+## 训练循环的超参数
+
+<mark style="color:blue;">学习率(lr)和预热率(warmup)应该在优化阶段的早期设置为一个非常小的值</mark>，在一定迭代次数后逐渐增加。这样可以<mark style="color:red;">避免过大的梯度和超频问题</mark>
+
+这里使用 BERT 版本的 Adam 优化器 — BertAdam
+
+***
+
+## 训练循环
+
+```python
+epochs = 4
+```
+
+***
+
+## 对训练进行评估
