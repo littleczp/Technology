@@ -20,11 +20,26 @@ pm2 start uvicorn --name lumi-ai --interpreter /.../miniconda3/envs/lumi-ai/bin/
 
 <details>
 
+<summary>UserWarning: 1Torch was not compiled with flash attention</summary>
+
+**安装支持Flash Attention的PyTorch，**&#x4F7F;用**CUDA 11.8+**&#x7248;本才能支持
+
+| 配置               | 速度     | 显存占用     |
+| ---------------- | ------ | -------- |
+| 无Flash Attention | 1x     | 1x       |
+| 有Flash Attention | 2-3x更快 | 减少30-50% |
+
+</details>
+
+<details>
+
 <summary>whisperx</summary>
 
 1. 避免免内存溢出：调整batch\_size=8、chunk\_length=30（每30秒分段）
 
 </details>
+
+##
 
 ## 报错
 
