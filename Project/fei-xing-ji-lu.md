@@ -100,6 +100,17 @@ text = tokenizer.apply_chat_template(
 
 ***
 
+## 告警
+
+```python
+import warnings
+
+warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
+warnings.filterwarnings("ignore", category=UserWarning, module="pyannote.audio")
+```
+
+***
+
 ## 报错
 
 <details>
