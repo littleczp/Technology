@@ -16,6 +16,13 @@ pm2 start uvicorn --name lumi-ai --interpreter /.../miniconda3/envs/lumi-ai/bin/
 ```
 {% endcode %}
 
+ngrok
+
+```sh
+# 查看配置
+cat ~/.config/ngrok/ngrok.yml
+```
+
 ## 优化
 
 <details>
