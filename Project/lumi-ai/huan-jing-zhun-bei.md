@@ -33,8 +33,12 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
 # 通过子模块的 setup.py 安装包
 pip install -r requirements_module.txt
+# （代理）安装子模块
+pip install -r requirements_module.txt -i https://pypi.org/simple --trusted-host pypi.org
 # 有一些子模块的包版本要替换，ctranslate2
 pip install -r requirements.txt
+# （代理）安装
+pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org
 
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ```
