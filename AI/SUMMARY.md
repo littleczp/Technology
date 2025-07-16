@@ -41,3 +41,5 @@
   * [BERT 的架构](wei-tiao-bert-mo-xing/bert-de-jia-gou.md)
   * [微调 BERT（略）](wei-tiao-bert-mo-xing/wei-tiao-bert-le.md)
 * [使用Transformer处理下游NLP任务](shi-yong-transformer-chu-li-xia-you-nlp-ren-wu.md)
+* [机器翻译](ji-qi-fan-yi/README.md)
+  * [什么是机器翻译](ji-qi-fan-yi/shen-me-shi-ji-qi-fan-yi.md)
