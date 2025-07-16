@@ -40,3 +40,4 @@
 * [微调BERT模型](wei-tiao-bert-mo-xing/README.md)
   * [BERT 的架构](wei-tiao-bert-mo-xing/bert-de-jia-gou.md)
   * [微调 BERT（略）](wei-tiao-bert-mo-xing/wei-tiao-bert-le.md)
+* [使用Transformer处理下游NLP任务](shi-yong-transformer-chu-li-xia-you-nlp-ren-wu.md)
