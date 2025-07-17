@@ -8,7 +8,7 @@
 将 Agents 与真实浏览器进行交互，轻松实现浏览器自动化
 {% endhint %}
 
-<figure><img src=".gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Environment
 

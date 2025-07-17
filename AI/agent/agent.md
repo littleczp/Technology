@@ -41,7 +41,7 @@ $$
 Agent = LLM + 规划 + 记忆 +工具使用
 $$
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **规划（Planning）：**&#x4E3B;要包括**子目标分解、反思与改进**
 * **记忆（Memory）：**&#x5206;为**短期记忆**和**长期记忆**
