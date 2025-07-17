@@ -31,3 +31,21 @@ model.init_from_file(..., weight_only=True)
 
 ## 对句子词元化
 
+```python
+sentence = 'I am only machine...'
+tokenized = list(trax.data.tokenize(iter([sentence]),...))[0]
+```
+
+## 从 Transformer 解码
+
+```python
+tokenized = tokenized[None, :]
+tokenized_translation = trax.supervised.decoding.autoregressive_sample(...)
+```
+
+## 对翻译结果去词元化并展示
+
+```python
+tokenized_translation = tokenized_translation[0][:-1]
+translation = trax.data.detokenize(tokenized_translation, ...)
+```
