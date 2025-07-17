@@ -25,3 +25,9 @@ model = trax.models.Transformer(
 
 ## 使用预训练权重初始化模型
 
+```python
+model.init_from_file(..., weight_only=True)
+```
+
+## 对句子词元化
+
