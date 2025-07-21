@@ -44,4 +44,5 @@
 * [机器翻译](ji-qi-fan-yi/README.md)
   * [什么是机器翻译](ji-qi-fan-yi/shen-me-shi-ji-qi-fan-yi.md)
   * [使用 Trax 进行翻译](ji-qi-fan-yi/shi-yong-trax-jin-xing-fan-yi.md)
-* [GPT-3](gpt-3.md)
+* [GPT-3](gpt-3/README.md)
+  * [OpenAI GPT Transformer 模型的架构](gpt-3/openai-gpt-transformer-mo-xing-de-jia-gou.md)
