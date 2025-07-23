@@ -98,5 +98,10 @@ autodl下载模型
 ```powershell
 modelscope download keepitsimple/faster-whisper-large-v3 --local_dir ./app/services/models/ASR/whisper/faster-whisper-large-v3
 
+modelscope download qwen/Qwen1.5-4B-Chat --local_dir ./app/services/models/LLM/Qwen1.5-4B-Chat
+
+modelscope download AI-ModelScope/XTTS-v2 --local_dir ./app/services/models/TTS/XTTS-v2
+
+modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
 ```
 {% endcode %}
