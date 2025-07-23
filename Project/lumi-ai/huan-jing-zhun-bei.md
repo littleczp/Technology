@@ -31,6 +31,11 @@ pip install --upgrade pip setuptools wheel
 # 国内
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
+# autodl记得切tmp，不然系统盘不够
+mkdir -p ~/autodl-tmp/tmp
+export TMPDIR=~/autodl-tmp/tmp
+export PIP_CACHE_DIR=~/autodl-tmp/tmp
+
 # 通过子模块的 setup.py 安装包
 pip install -r requirements_module.txt
 # （代理）安装子模块
