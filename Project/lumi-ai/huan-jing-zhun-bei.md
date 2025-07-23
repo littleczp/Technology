@@ -92,3 +92,11 @@ sttn（字幕）
 
 {% file src="../.gitbook/assets/infer_model.pth" %}
 
+autodl下载模型
+
+{% code overflow="wrap" %}
+```powershell
+modelscope download keepitsimple/faster-whisper-large-v3 --local_dir ./app/services/models/ASR/whisper/faster-whisper-large-v3
+
+```
+{% endcode %}
