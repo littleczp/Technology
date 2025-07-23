@@ -35,6 +35,9 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install -r requirements_module.txt
 # （代理）安装子模块
 pip install -r requirements_module.txt -i https://pypi.org/simple --trusted-host pypi.org
+# 如果总是超时
+pip 加上 --default-timeout=1000 --retries 10
+
 # 有一些子模块的包版本要替换，ctranslate2
 pip install -r requirements.txt
 # （代理）安装
