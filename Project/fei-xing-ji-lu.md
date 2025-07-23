@@ -23,6 +23,14 @@ ngrok
 cat ~/.config/ngrok/ngrok.yml
 ```
 
+github lfs
+
+```sh
+git lfs track "app/backend/models/**"
+git lfs track "app/backend/ffmpeg/**"
+git add .gitattributes
+```
+
 ## 优化
 
 <details>
