@@ -65,6 +65,8 @@ conda install ffmpeg==7.0.2 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/clo
 
 ## 模型
 
+镜像：[https://hf-mirror.com/](https://hf-mirror.com/)
+
 多线程下载器
 
 ```sh
