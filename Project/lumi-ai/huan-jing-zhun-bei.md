@@ -78,3 +78,7 @@ ln -s ~/autodl-tmp/models/ASR ~/lumi-ai/app/services/models
 ```
 {% endcode %}
 
+sttn（字幕）
+
+{% file src="../.gitbook/assets/infer_model.pth" %}
+
