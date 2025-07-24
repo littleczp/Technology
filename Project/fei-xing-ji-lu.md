@@ -140,7 +140,7 @@ VAD\_SEGMENTATION\_URL has Expired\
 
 解决：替换load\_vad\_model函数
 
-```
+```python
 def load_vad_model(device, vad_onset=0.500, vad_offset=0.363, use_auth_token=None, model_fp=None):
     main_path = os.path.abspath(sys.argv[0])
     project_path = os.path.dirname(main_path)
@@ -177,6 +177,11 @@ def load_vad_model(device, vad_onset=0.500, vad_offset=0.363, use_auth_token=Non
 <details>
 
 <summary>Max retries exceeded with url: /jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn/resolve/main/preprocessor_config.json</summary>
+
+```sh
+export HF_ENDPOINT=https://hf-mirror.com
+然后再次运行
+```
 
 <pre class="language-sh"><code class="lang-sh">git clone 
 https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn
