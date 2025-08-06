@@ -98,10 +98,17 @@ autodl下载模型
 ```powershell
 modelscope download keepitsimple/faster-whisper-large-v3 --local_dir ./app/services/models/ASR/whisper/faster-whisper-large-v3
 
-modelscope download qwen/Qwen1.5-4B-Chat --local_dir ./app/services/models/LLM/Qwen1.5-4B-Chat
-
 modelscope download AI-ModelScope/XTTS-v2 --local_dir ./app/services/models/TTS/XTTS-v2
 
 modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
+
+# funasr
+modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --local_dir ./app/services/models/ASR/FunASR/punc_ct-transformer_cn-en-common-vocab471067-large
+
+modelscope download iic/speech_fsmn_vad_zh-cn-16k-common-pytorch --local_dir ./app/services/models/ASR/FunASR/speech_fsmn_vad_zh-cn-16k-common-pytorch
+
+modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --local_dir ./app/services/models/ASR/FunASR/punc_ct-transformer_cn-en-common-vocab471067-large
+
+modelscope download iic/speech_campplus_sv_zh-cn_16k-common --local_dir ./app/services/models/ASR/FunASR/speech_campplus_sv_zh-cn_16k-common
 ```
 {% endcode %}
