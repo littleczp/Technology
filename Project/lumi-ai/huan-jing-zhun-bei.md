@@ -103,7 +103,7 @@ modelscope download AI-ModelScope/XTTS-v2 --local_dir ./app/services/models/TTS/
 modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
 
 # funasr
-modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --local_dir ./app/services/models/ASR/FunASR/punc_ct-transformer_cn-en-common-vocab471067-large
+modelscope download iic/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch --local_dir ./app/services/models/ASR/FunASR/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch
 
 modelscope download iic/speech_fsmn_vad_zh-cn-16k-common-pytorch --local_dir ./app/services/models/ASR/FunASR/speech_fsmn_vad_zh-cn-16k-common-pytorch
 
