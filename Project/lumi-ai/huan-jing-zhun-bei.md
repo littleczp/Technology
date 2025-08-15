@@ -24,6 +24,13 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ## 依赖库
 
+### 子依赖
+
+```
+git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+git submodule update --init --force --recursive
+```
+
 {% code overflow="wrap" %}
 ```sh
 pip install --upgrade pip setuptools wheel
