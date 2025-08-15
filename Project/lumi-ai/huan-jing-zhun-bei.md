@@ -26,8 +26,10 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ### 子依赖
 
-```
+```sh
 git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+git config --file .gitmodules --list
+
 git submodule update --init --force --recursive
 ```
 
