@@ -29,8 +29,14 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 ```sh
 git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
 git config --file .gitmodules --list
+git commit -m "feat: add CosyVoice submodule"
 
 git submodule update --init --force --recursive
+
+# 如果match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
+rm -rf .git/modules/CosyVoice
+# win
+Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
 ```
 
 {% code overflow="wrap" %}
