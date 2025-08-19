@@ -136,8 +136,6 @@ modelscope download iic/speech_campplus_sv_zh-cn_16k-common --local_dir ./app/se
 huggingface-cli download IndexTeam/IndexTTS-1.5 config.yaml bigvgan_discriminator.pth bigvgan_generator.pth bpe.model dvae.pth gpt.pth unigram_12000.vocab --local-dir .\app\services\models\TTS\IndexTTS-1.5
 
 # indextts(linux)
-huggingface-cli download IndexTeam/IndexTTS-1.5 \
-  config.yaml bigvgan_discriminator.pth bigvgan_generator.pth bpe.model dvae.pth gpt.pth unigram_12000.vocab \
-  --local-dir ./app/services/models/TTS/IndexTTS-1.5
+modelscope download IndexTeam/IndexTTS-1.5 --local_dir ./app/services/models/TTS/IndexTTS-1.5
 ```
 {% endcode %}
