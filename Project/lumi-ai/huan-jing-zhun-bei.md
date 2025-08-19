@@ -126,7 +126,12 @@ modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --loc
 
 modelscope download iic/speech_campplus_sv_zh-cn_16k-common --local_dir ./app/services/models/ASR/FunASR/speech_campplus_sv_zh-cn_16k-common
 
-# indextts
+# indextts(windows)
 huggingface-cli download IndexTeam/IndexTTS-1.5 config.yaml bigvgan_discriminator.pth bigvgan_generator.pth bpe.model dvae.pth gpt.pth unigram_12000.vocab --local-dir .\app\services\models\TTS\IndexTTS-1.5
+
+# indextts(linux)
+huggingface-cli download IndexTeam/IndexTTS-1.5 \
+  config.yaml bigvgan_discriminator.pth bigvgan_generator.pth bpe.model dvae.pth gpt.pth unigram_12000.vocab \
+  --local-dir ./app/services/models/TTS/IndexTTS-1.5
 ```
 {% endcode %}
