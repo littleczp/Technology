@@ -64,6 +64,11 @@ pip install -r requirements.txt
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org
 
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
+
+
+# windows上安装indextts的依赖需要单独安装pynini
+conda install -c conda-forge pynini==2.1.6
+pip install WeTextProcessing --no-deps
 ```
 {% endcode %}
 
