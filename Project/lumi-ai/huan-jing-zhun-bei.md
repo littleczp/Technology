@@ -32,6 +32,7 @@ git config --file .gitmodules --list
 git commit -m "feat: add CosyVoice submodule"
 
 git submodule update --init --force --recursive
+git submodule update --init --recursive
 
 # 如果match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
 rm -rf .git/modules/CosyVoice
