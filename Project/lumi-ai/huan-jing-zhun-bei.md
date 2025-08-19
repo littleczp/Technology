@@ -125,5 +125,8 @@ modelscope download iic/speech_fsmn_vad_zh-cn-16k-common-pytorch --local_dir ./a
 modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --local_dir ./app/services/models/ASR/FunASR/punc_ct-transformer_cn-en-common-vocab471067-large
 
 modelscope download iic/speech_campplus_sv_zh-cn_16k-common --local_dir ./app/services/models/ASR/FunASR/speech_campplus_sv_zh-cn_16k-common
+
+# indextts
+modelscope download IndexTeam/IndexTTS-1.5 --local_dir ./app/services/models/TTS/IndexTTS-1.5
 ```
 {% endcode %}
