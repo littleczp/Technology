@@ -95,6 +95,22 @@ fc-list : family | grep -i dejavu
 sudo fc-cache -fv
 ```
 
+### FFMPEG-GPU
+
+出现以下输出说明支持gpu加速
+
+```
+ffmpeg -encoders | grep nvenc
+
+...
+
+ V....D h264_nvenc           NVIDIA NVENC H.264 encoder (codec h264)
+ V..... nvenc                NVIDIA NVENC H.264 encoder (codec h264)
+ V..... nvenc_h264           NVIDIA NVENC H.264 encoder (codec h264)
+ V..... nvenc_hevc           NVIDIA NVENC hevc encoder (codec hevc)
+ V....D hevc_nvenc           NVIDIA NVENC hevc encoder (codec hevc)
+```
+
 ## 模型
 
 镜像：[https://hf-mirror.com/](https://hf-mirror.com/)
