@@ -84,6 +84,17 @@ conda install ffmpeg==7.0.2 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/clo
 ```
 {% endcode %}
 
+### FFMPEG-字体
+
+```sh
+sudo apt install fonts-noto fonts-noto-cjk fonts-noto-core fonts-noto-extra fonts-noto-mono
+sudo apt install fonts-dejavu
+fc-list : family | grep -i noto
+fc-list : family | grep -i dejavu
+
+sudo fc-cache -fv
+```
+
 ## 模型
 
 镜像：[https://hf-mirror.com/](https://hf-mirror.com/)
