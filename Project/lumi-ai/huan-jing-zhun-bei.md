@@ -60,6 +60,11 @@ pip install -r requirements_module.txt
 pip install -r requirements_module.txt -i https://pypi.org/simple --trusted-host pypi.org
 # 如果总是超时
 pip 加上 --default-timeout=1000 --retries 10
+# 目前安装submodules/tts时会出错，所以要分开安装
+pip install submodules/demucs/.
+pip install submodules/whisper/.
+pip install submodules/whisperX/.
+pip install coqui-tts
 
 # 有一些子模块的包版本要替换，ctranslate2
 pip install -r requirements.txt
