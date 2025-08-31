@@ -4,6 +4,8 @@
 
 ```sh
 conda create -n lumi-ai python=3.10 -y
+
+conda remove --name lumi-ai --all
 ```
 
 ## GPU
