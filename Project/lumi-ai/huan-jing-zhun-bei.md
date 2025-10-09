@@ -42,7 +42,10 @@ rm -rf .git/modules/CosyVoice
 Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
 
 #indextts
-git submodule add https://github.com/index-tts/index-tts.git index-tts
+git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
+cd IndexTTS
+git checkout main
+git pull
 </code></pre>
 
 {% code overflow="wrap" %}
