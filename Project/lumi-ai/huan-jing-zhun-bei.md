@@ -28,19 +28,22 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ### 子依赖
 
-```sh
-git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
-git config --file .gitmodules --list
+<pre class="language-sh"><code class="lang-sh"><strong>#cosyvoice
+</strong><strong>git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+</strong>git config --file .gitmodules --list
 git commit -m "feat: add CosyVoice submodule"
 
 git submodule update --init --force --recursive
 git submodule update --init --recursive
 
-# 如果match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
+# 如果match-TTS出错，需要清理缓存 &#x26; CosyVoice文件夹 &#x26; .gitmodules
 rm -rf .git/modules/CosyVoice
 # win
 Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
-```
+
+#indextts
+git submodule add https://github.com/index-tts/index-tts.git index-tts
+</code></pre>
 
 {% code overflow="wrap" %}
 ```sh
