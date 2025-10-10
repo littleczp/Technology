@@ -28,8 +28,7 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ### 子依赖
 
-<pre class="language-sh"><code class="lang-sh"><strong>#cosyvoice
-</strong><strong>git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+<pre class="language-sh"><code class="lang-sh"><strong>git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
 </strong>git config --file .gitmodules --list
 git commit -m "feat: add CosyVoice submodule"
 
@@ -46,11 +45,11 @@ git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
 cd IndexTTS
 git checkout main
 git pull
+pip install -e .[webui] 
+pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
 </code></pre>
 
-{% code overflow="wrap" %}
-```sh
-pip install --upgrade pip setuptools wheel
+<pre class="language-sh" data-overflow="wrap"><code class="lang-sh">pip install --upgrade pip setuptools wheel
 
 # 国内
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
@@ -80,14 +79,13 @@ pip install -r requirements.txt
 # （代理）安装
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org
 
-pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
-
+<strong>pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
+</strong>
 
 # windows上安装indextts的依赖需要单独安装pynini
 conda install -c conda-forge pynini==2.1.6
 pip install WeTextProcessing --no-deps
-```
-{% endcode %}
+</code></pre>
 
 ### FFMPEG
 
@@ -182,3 +180,11 @@ huggingface-cli download IndexTeam/IndexTTS-1.5 config.yaml bigvgan_discriminato
 modelscope download IndexTeam/IndexTTS-1.5 --local_dir ./app/services/models/TTS/IndexTTS-1.5
 ```
 {% endcode %}
+
+indextts2
+
+```sh
+cd IndexTTS
+modelscope download --model IndexTeam/IndexTTS-2 --local_dir checkpoints
+
+```
