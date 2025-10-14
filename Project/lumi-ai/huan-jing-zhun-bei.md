@@ -28,14 +28,15 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ### 子依赖
 
-<pre class="language-sh"><code class="lang-sh"><strong>git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
-</strong>git config --file .gitmodules --list
+```sh
+git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+git config --file .gitmodules --list
 git commit -m "feat: add CosyVoice submodule"
 
 git submodule update --init --force --recursive
 git submodule update --init --recursive
 
-# 如果match-TTS出错，需要清理缓存 &#x26; CosyVoice文件夹 &#x26; .gitmodules
+# 如果match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
 rm -rf .git/modules/CosyVoice
 # win
 Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
@@ -47,7 +48,7 @@ git checkout main
 git pull
 pip install -e .[webui] 
 pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
-</code></pre>
+```
 
 <pre class="language-sh" data-overflow="wrap"><code class="lang-sh">pip install --upgrade pip setuptools wheel
 
