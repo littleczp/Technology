@@ -50,7 +50,9 @@ pip install -e .[webui]
 pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
 ```
 
-<pre class="language-sh" data-overflow="wrap"><code class="lang-sh">pip install --upgrade pip setuptools wheel
+{% code overflow="wrap" %}
+```sh
+pip install --upgrade pip setuptools wheel
 
 # 国内
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
@@ -80,13 +82,13 @@ pip install -r requirements.txt
 # （代理）安装
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org
 
-<strong>pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
-</strong>
+pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 
 # windows上安装indextts的依赖需要单独安装pynini
 conda install -c conda-forge pynini==2.1.6
 pip install WeTextProcessing --no-deps
-</code></pre>
+```
+{% endcode %}
 
 ### FFMPEG
 
