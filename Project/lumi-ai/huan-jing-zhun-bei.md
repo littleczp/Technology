@@ -8,6 +8,18 @@ conda create -n lumi-ai python=3.10 -y
 conda remove --name lumi-ai --all
 ```
 
+## AutoDL
+
+```
+export PIP_CACHE_DIR=~/autodl-tmp/.cache/pip
+echo 'export PIP_CACHE_DIR=~/autodl-tmp/.cache/pip' >> ~/.bashrc
+source ~/.bashrc
+
+pip config set global.cache-dir ~/autodl-tmp/.cache/pip
+
+python -m venv venv
+```
+
 ## GPU
 
 ### CUDA
