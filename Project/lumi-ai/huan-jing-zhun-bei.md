@@ -50,7 +50,15 @@ pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun
 ```sh
 git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
 
-# 如果match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
+cd CosyVoice
+git submodule update --init --recursive
+```
+{% endtab %}
+
+{% tab title="异常" %}
+match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
+
+```sh
 rm -rf .git/modules/CosyVoice
 # win
 Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
