@@ -31,6 +31,11 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 ```sh
 git submodule update --init --force --recursive
 git submodule update --init --recursive
+
+# autodl pip cache
+mkdir -p ~/autodl-tmp/tmp
+export TMPDIR=~/autodl-tmp/tmp
+export PIP_CACHE_DIR=~/autodl-tmp/tmp
 ```
 {% endtab %}
 
