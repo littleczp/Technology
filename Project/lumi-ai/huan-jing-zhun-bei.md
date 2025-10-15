@@ -8,18 +8,6 @@ conda create -n lumi-ai python=3.10 -y
 conda remove --name lumi-ai --all
 ```
 
-## AutoDL
-
-```
-export PIP_CACHE_DIR=~/autodl-tmp/.cache/pip
-echo 'export PIP_CACHE_DIR=~/autodl-tmp/.cache/pip' >> ~/.bashrc
-source ~/.bashrc
-
-pip config set global.cache-dir ~/autodl-tmp/.cache/pip
-
-python -m venv venv
-```
-
 ## GPU
 
 ### CUDA
@@ -38,29 +26,37 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ## 依赖库
 
-### 子依赖
-
+{% tabs %}
+{% tab title="子模块" %}
 ```sh
-git submodule add https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
-git config --file .gitmodules --list
-git commit -m "feat: add CosyVoice submodule"
-
 git submodule update --init --force --recursive
 git submodule update --init --recursive
+```
+{% endtab %}
+
+{% tab title="IndexTTS" %}
+```sh
+git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
+cd IndexTTS
+git checkout main
+git pull
+
+pip install -e .[webui] 
+pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
+```
+{% endtab %}
+
+{% tab title="CosyVoice" %}
+```sh
+git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
 
 # 如果match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
 rm -rf .git/modules/CosyVoice
 # win
 Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
-
-#indextts
-git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
-cd IndexTTS
-git checkout main
-git pull
-pip install -e .[webui] 
-pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
 ```
+{% endtab %}
+{% endtabs %}
 
 {% code overflow="wrap" %}
 ```sh
