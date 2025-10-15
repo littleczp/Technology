@@ -27,7 +27,7 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 ## 依赖库
 
 {% tabs %}
-{% tab title="子模块" %}
+{% tab title="额外模块" %}
 ```sh
 git submodule update --init --force --recursive
 git submodule update --init --recursive
@@ -36,6 +36,15 @@ git submodule update --init --recursive
 mkdir -p ~/autodl-tmp/tmp
 export TMPDIR=~/autodl-tmp/tmp
 export PIP_CACHE_DIR=~/autodl-tmp/tmp
+```
+{% endtab %}
+
+{% tab title="CosyVoice" %}
+```sh
+git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+
+cd CosyVoice
+pip install -r requirements.txt
 ```
 {% endtab %}
 
@@ -51,15 +60,6 @@ pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun
 ```
 {% endtab %}
 
-{% tab title="CosyVoice" %}
-```sh
-git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
-
-cd CosyVoice
-pip install -r requirements.txt
-```
-{% endtab %}
-
 {% tab title="异常" %}
 match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
 
@@ -68,28 +68,28 @@ rm -rf .git/modules/CosyVoice
 # win
 Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
 ```
+
+pip网络超时：
+
+```sh
+pip 加上 --default-timeout=1000 --retries 10
+
+pip 加上 -i https://pypi.org/simple --trusted-host pypi.org
+```
 {% endtab %}
 {% endtabs %}
 
-{% code overflow="wrap" %}
+{% tabs %}
+{% tab title="子模块" %}
 ```sh
-pip install --upgrade pip setuptools wheel
-
-# 国内
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
-
-# autodl记得切tmp，不然系统盘不够
-mkdir -p ~/autodl-tmp/tmp
-export TMPDIR=~/autodl-tmp/tmp
-export PIP_CACHE_DIR=~/autodl-tmp/tmp
-
-# 通过子模块的 setup.py 安装包
 pip install -r requirements_module.txt
-# （代理）安装子模块
-pip install -r requirements_module.txt -i https://pypi.org/simple --trusted-host pypi.org
-# 如果总是超时
-pip 加上 --default-timeout=1000 --retries 10
-# 目前直接安装submodules/tts时会出错，可以分开安装
+```
+{% endtab %}
+
+{% tab title="异常" %}
+直接安装submodules/tts时会出错，可以分开安装
+
+```sh
 pip install submodules/demucs/.
 pip install submodules/whisper/.
 pip install submodules/whisperX/.
@@ -97,7 +97,12 @@ pip install submodules/whisperX/.
 # 使用conda来解决依赖num2words
 conda install -c conda-forge num2words 
 pip install submodules/TTS/.
+```
+{% endtab %}
+{% endtabs %}
 
+{% code overflow="wrap" %}
+```sh
 # 有一些子模块的包版本要替换，ctranslate2
 pip install -r requirements.txt
 # （代理）安装
