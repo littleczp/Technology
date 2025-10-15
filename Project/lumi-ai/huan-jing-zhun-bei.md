@@ -51,7 +51,7 @@ pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun
 git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
 
 cd CosyVoice
-git submodule update --init --recursive
+pip install -r requirements.txt
 ```
 {% endtab %}
 
