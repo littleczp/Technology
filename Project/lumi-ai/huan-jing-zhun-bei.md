@@ -83,6 +83,9 @@ pip 加上 -i https://pypi.org/simple --trusted-host pypi.org
 {% tab title="子模块" %}
 ```sh
 pip install -r requirements_module.txt
+
+# autodl(venv)
+pip install -r requirements_module.txt -i https://pypi.org/simple/
 ```
 {% endtab %}
 
