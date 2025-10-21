@@ -29,7 +29,7 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ## 依赖库
 
-```
+```sh
 # autodl pip cache
 mkdir -p ~/autodl-tmp/tmp
 pip config set global.cache-dir "~/autodl-tmp/tmp"
