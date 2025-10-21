@@ -95,7 +95,10 @@ pip install submodules/whisper/.
 pip install submodules/whisperX/.
 
 # 使用conda来解决依赖num2words
-conda install -c conda-forge num2words 
+conda install -c conda-forge num2words
+# venv情况下可以替换源
+pip install num2words -i https://pypi.org/simple/
+
 pip install submodules/TTS/.
 ```
 
