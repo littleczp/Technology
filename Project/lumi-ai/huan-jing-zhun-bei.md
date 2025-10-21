@@ -30,9 +30,30 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 ## 依赖库
 
 ```sh
-# autodl pip cache
-mkdir -p ~/autodl-tmp/tmp
-pip config set global.cache-dir "~/autodl-tmp/tmp"
+#!/bin/bash
+
+# 设置绝对路径
+PIP_CACHE="~/autodl-tmp/tmp"
+SYSTEM_CACHE="~/autodl-tmp/tmp"
+
+# 创建目录
+mkdir -p $PIP_CACHE
+mkdir -p $SYSTEM_CACHE
+
+# 设置环境变量
+export PIP_CACHE_DIR=$PIP_CACHE
+export XDG_CACHE_HOME=$SYSTEM_CACHE
+
+# 永久保存
+echo "export PIP_CACHE_DIR=\"$PIP_CACHE\"" >> ~/.bashrc
+echo "export XDG_CACHE_HOME=\"$SYSTEM_CACHE\"" >> ~/.bashrc
+
+# 设置pip配置
+pip config set global.cache-dir "$PIP_CACHE"
+
+echo "设置完成！"
+echo "PIP_CACHE_DIR: $PIP_CACHE_DIR"
+echo "XDG_CACHE_HOME: $XDG_CACHE_HOME"
 ```
 
 {% tabs %}
