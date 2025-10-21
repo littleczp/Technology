@@ -6,6 +6,9 @@
 conda create -n lumi-ai python=3.10 -y
 
 conda remove --name lumi-ai --all
+
+conda create --prefix ~/autodl-tmp/tmp/lumi-ai python=3.10 -y
+conda activate ~/autodl-tmp/tmp/lumi-ai
 ```
 
 ## GPU
@@ -26,58 +29,11 @@ sudo sh cuda_11.8.0_520.61.05_linux.run
 
 ## 依赖库
 
-{% tabs %}
-{% tab title="额外模块" %}
-```sh
-git submodule update --init --force --recursive
-git submodule update --init --recursive
-
+```
 # autodl pip cache
 mkdir -p ~/autodl-tmp/tmp
-export TMPDIR=~/autodl-tmp/tmp
-export PIP_CACHE_DIR=~/autodl-tmp/tmp
+pip config set global.cache-dir "~/autodl-tmp/tmp"
 ```
-{% endtab %}
-
-{% tab title="CosyVoice" %}
-```sh
-git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
-
-cd CosyVoice
-pip install -r requirements.txt
-```
-{% endtab %}
-
-{% tab title="IndexTTS" %}
-```sh
-git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
-cd IndexTTS
-git checkout main
-git pull
-
-pip install -e .[webui] 
-pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
-```
-{% endtab %}
-
-{% tab title="异常" %}
-match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
-
-```sh
-rm -rf .git/modules/CosyVoice
-# win
-Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
-```
-
-pip网络超时：
-
-```sh
-pip 加上 --default-timeout=1000 --retries 10
-
-pip 加上 -i https://pypi.org/simple --trusted-host pypi.org
-```
-{% endtab %}
-{% endtabs %}
 
 {% tabs %}
 {% tab title="子模块" %}
@@ -122,6 +78,54 @@ apt install -y \
     libswscale-dev \
     libswresample-dev \
     ffmpeg
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="额外模块" %}
+```sh
+git submodule update --init --force --recursive
+git submodule update --init --recursive
+```
+{% endtab %}
+
+{% tab title="CosyVoice" %}
+```sh
+git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
+
+cd CosyVoice
+pip install -r requirements.txt
+```
+{% endtab %}
+
+{% tab title="IndexTTS" %}
+```sh
+git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
+cd IndexTTS
+git checkout main
+git pull
+
+pip install -e .[webui] 
+pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
+```
+{% endtab %}
+
+{% tab title="异常" %}
+match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
+
+```sh
+rm -rf .git/modules/CosyVoice
+# win
+Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
+```
+
+pip网络超时：
+
+```sh
+pip 加上 --default-timeout=1000 --retries 10
+
+pip 加上 -i https://pypi.org/simple --trusted-host pypi.org
 ```
 {% endtab %}
 {% endtabs %}
