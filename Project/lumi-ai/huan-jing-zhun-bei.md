@@ -87,7 +87,7 @@ pip install -r requirements_module.txt
 {% endtab %}
 
 {% tab title="异常" %}
-直接安装submodules/tts时会出错，可以分开安装
+子模块安装submodules/tts时会出错：num2words，可以分开安装
 
 ```sh
 pip install submodules/demucs/.
@@ -97,6 +97,25 @@ pip install submodules/whisperX/.
 # 使用conda来解决依赖num2words
 conda install -c conda-forge num2words 
 pip install submodules/TTS/.
+```
+
+分布安装 pip install submodules/whisperX/. 时会报错：Collecting av==11.\* 安装异常
+
+```sh
+# 更新包列表
+apt update
+
+# 安装 FFmpeg 开发库
+apt install -y \
+    pkg-config \
+    libavformat-dev \
+    libavcodec-dev \
+    libavdevice-dev \
+    libavutil-dev \
+    libavfilter-dev \
+    libswscale-dev \
+    libswresample-dev \
+    ffmpeg
 ```
 {% endtab %}
 {% endtabs %}
