@@ -194,19 +194,14 @@ whisperx
 
 {% code overflow="wrap" %}
 ```sh
-mkdir -p ~/lumi-ai/app/services/models
-mkdir -p ~/autodl-tmp/models/ASR && mkdir -p ~/autodl-tmp/models/LLM
+mkdir -p ~/autodl-tmp/lumi-ai/app/services/models
+mkdir -p ~/autodl-tmp/lumi-ai/app/services/models/ASR && mkdir -p ~/autodl-tmp/lumi-ai/app/services/models/LLM
 
-cd ~/autodl-tmp/models/ASR
+cd ~/autodl-tmp/lumi-ai/app/services/models/ASR
 aria2c -x 16 https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth
 aria2c -x 16 https://github.com/m-bain/whisperX/raw/a83ddbdf9ba29278cd6de50f2d735df3cd3984b1/models/pytorch_model.bin
-ln -s ~/autodl-tmp/models/ASR ~/lumi-ai/app/services/models
 ```
 {% endcode %}
-
-sttn（字幕）
-
-{% file src="../.gitbook/assets/infer_model.pth" %}
 
 autodl下载模型
 
@@ -226,12 +221,6 @@ modelscope download iic/speech_fsmn_vad_zh-cn-16k-common-pytorch --local_dir ./a
 modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --local_dir ./app/services/models/ASR/FunASR/punc_ct-transformer_cn-en-common-vocab471067-large
 
 modelscope download iic/speech_campplus_sv_zh-cn_16k-common --local_dir ./app/services/models/ASR/FunASR/speech_campplus_sv_zh-cn_16k-common
-
-# indextts(windows)
-huggingface-cli download IndexTeam/IndexTTS-1.5 config.yaml bigvgan_discriminator.pth bigvgan_generator.pth bpe.model dvae.pth gpt.pth unigram_12000.vocab --local-dir .\app\services\models\TTS\IndexTTS-1.5
-
-# indextts(linux)
-modelscope download IndexTeam/IndexTTS-1.5 --local_dir ./app/services/models/TTS/IndexTTS-1.5
 ```
 {% endcode %}
 
