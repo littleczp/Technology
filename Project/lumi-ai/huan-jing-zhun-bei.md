@@ -148,6 +148,13 @@ pip 加上 --default-timeout=1000 --retries 10
 
 pip 加上 -i https://pypi.org/simple --trusted-host pypi.org
 ```
+
+If this call came from a \_pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0
+
+```sh
+pip uninstall protobuf
+pip install protobuf==3.20.3
+```
 {% endtab %}
 {% endtabs %}
 
