@@ -17,3 +17,7 @@
 ***
 
 * [飞行记录](fei-xing-ji-lu.md)
+
+## Serverless AI
+
+* [Modal](serverless-ai/modal.md)
