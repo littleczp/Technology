@@ -122,6 +122,28 @@ server {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
+    
+    location /n8n/ {
+        proxy_pass http://localhost:5678;
+        rewrite ^/n8n/(.*)$ /$1 break;
+
+        # 标准头信息
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # 注意：支持 WebSocket (n8n 编辑器必须)
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        proxy_set_header X-Forwarded-Prefix /n8n;
+
+        # 增加超时时间，防止视频处理时间过长导致 Nginx 504 报错断开
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+    }
 }
 ```
 
