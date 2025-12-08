@@ -92,6 +92,7 @@ tmux kill-session -t czp
 
 ```bash
 vim /etc/nginx/nginx.conf
+vim /etc/nginx/conf.d/lumipath.conf
 
 server {
     listen 80;
