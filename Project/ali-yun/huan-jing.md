@@ -125,7 +125,9 @@ server {
     
     location /n8n/ {
         proxy_pass http://localhost:5678;
+        rewrite ^/n8n/n8n/(.*)$ /n8n/$1 permanent;
         rewrite ^/n8n/(.*)$ /$1 break;
+        proxy_redirect / /n8n/;
 
         # 标准头信息
         proxy_set_header Host $host;
