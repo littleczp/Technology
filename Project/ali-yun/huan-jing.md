@@ -197,3 +197,10 @@ https://googlechromelabs.github.io/chrome-for-testing/#stable
 chmod +x ~/lumi/Lumi/app/utils/chromedriver
 ~/lumi/Lumi/app/utils/chromedriver --verbose
 ```
+
+n8n脚本导出
+
+```shellscript
+chmod -R 777 local-media
+docker compose exec n8n n8n export:workflow --all --output=/data/workflows_backup.json
+```
