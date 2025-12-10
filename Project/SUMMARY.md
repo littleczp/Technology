@@ -21,3 +21,7 @@
 ## Serverless AI
 
 * [Modal](serverless-ai/modal.md)
+
+## Others
+
+* [wifi](others/wifi.md)
