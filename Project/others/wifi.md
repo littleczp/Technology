@@ -25,6 +25,8 @@ ip: 192.168.100.10
 子网掩码: 255.255.255.0
 dns: 192.168.100.1 (路由器)
 ```
+
+N1完成处理后可以改回DHCP
 {% endtab %}
 
 {% tab title="N1盒子" %}
@@ -46,21 +48,17 @@ DHCP 设置
 * 增加选项：6,192.168.100.2 (DNS 是 N1)
 ```
 
+passwall 导入订阅
+
 文件上传替代旧版本xray
 
 ```
 mv /tmp/upload/xray /usr/bin/xray
 ```
+
+记得对齐系统时间～
 {% endtab %}
 {% endtabs %}
-
-
-
-
-
-
-
-
 
 ## Xray 版本
 
