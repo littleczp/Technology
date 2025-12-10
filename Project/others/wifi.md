@@ -46,9 +46,21 @@ DHCP 设置
 * 增加选项：6,192.168.100.2 (DNS 是 N1)
 ```
 
+文件上传替代旧版本xray
 
+```
+mv /tmp/upload/xray /usr/bin/xray
+```
 {% endtab %}
 {% endtabs %}
+
+
+
+
+
+
+
+
 
 ## Xray 版本
 
