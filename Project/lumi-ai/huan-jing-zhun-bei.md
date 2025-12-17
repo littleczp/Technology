@@ -123,14 +123,6 @@ sudo apt update
 sudo apt install aria2
 ```
 
-autodl下载模型
-
-{% code overflow="wrap" %}
-```powershell
-modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
-```
-{% endcode %}
-
 indextts2
 
 ```sh

@@ -53,3 +53,12 @@ echo "设置完成！"
 echo "PIP_CACHE_DIR: $PIP_CACHE_DIR"
 echo "XDG_CACHE_HOME: $XDG_CACHE_HOME"
 ```
+
+***
+
+## 模型
+
+```shellscript
+modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
+```
+
