@@ -11,6 +11,24 @@ conda create --prefix ~/autodl-tmp/tmp/lumi-ai python=3.10 -y
 conda activate ~/autodl-tmp/tmp/lumi-ai
 ```
 
+autodl写入 \~/.bashrc 可以自动加载conda
+
+```
+# 初始化 conda
+if [ -f "/root/miniconda3/etc/profile.d/conda.sh" ]; then
+    source "/root/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "/opt/conda/etc/profile.d/conda.sh" ]; then
+    source "/opt/conda/etc/profile.d/conda.sh"
+else
+    export PATH="/root/miniconda3/bin:$PATH"
+fi
+
+# 激活指定环境（如果存在）
+if conda env list | grep -q "autodl-tmp/tmp/lumi-ai"; then
+    conda activate ~/autodl-tmp/tmp/lumi-ai
+fi
+```
+
 ## GPU
 
 ### CUDA
