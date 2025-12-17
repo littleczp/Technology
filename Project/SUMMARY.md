@@ -2,17 +2,17 @@
 
 * [Project](README.md)
 
-## ALI云
+## 环境
 
-* [环境](ali-yun/huan-jing.md)
+* [env](huan-jing/env.md)
+* [Python](huan-jing/python.md)
 
 ## Lumi
-
-* [Page 1](lumi/page-1.md)
 
 ## Lumi AI
 
 * [环境准备](lumi-ai/huan-jing-zhun-bei.md)
+* [Page 2](lumi-ai/page-2.md)
 
 ***
 
