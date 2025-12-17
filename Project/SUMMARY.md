@@ -4,10 +4,9 @@
 
 ## 环境
 
-* [env](huan-jing/env.md)
+* [SSH](huan-jing/ssh.md)
 * [Python](huan-jing/python.md)
-
-## Lumi
+* [AutoDL](huan-jing/autodl.md)
 
 ## Lumi AI
 
