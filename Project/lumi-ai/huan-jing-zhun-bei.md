@@ -129,15 +129,6 @@ git submodule update --init --recursive
 ```
 {% endtab %}
 
-{% tab title="CosyVoice" %}
-```sh
-git submodule add --force https://github.com/FunAudioLLM/CosyVoice.git CosyVoice
-
-cd CosyVoice
-pip install -r requirements.txt
-```
-{% endtab %}
-
 {% tab title="IndexTTS" %}
 ```sh
 git submodule add --force https://github.com/index-tts/index-tts.git IndexTTS
@@ -151,14 +142,6 @@ pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun
 {% endtab %}
 
 {% tab title="异常" %}
-match-TTS出错，需要清理缓存 & CosyVoice文件夹 & .gitmodules
-
-```sh
-rm -rf .git/modules/CosyVoice
-# win
-Remove-Item -Path .git\modules\CosyVoice -Recurse -Force
-```
-
 pip网络超时：
 
 ```sh
@@ -240,37 +223,11 @@ sudo apt update
 sudo apt install aria2
 ```
 
-whisperx
-
-{% code overflow="wrap" %}
-```sh
-mkdir -p ~/autodl-tmp/lumi-ai/app/services/models
-mkdir -p ~/autodl-tmp/lumi-ai/app/services/models/ASR && mkdir -p ~/autodl-tmp/lumi-ai/app/services/models/LLM
-
-cd ~/autodl-tmp/lumi-ai/app/services/models/ASR
-aria2c -x 16 https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth
-aria2c -x 16 https://github.com/m-bain/whisperX/raw/a83ddbdf9ba29278cd6de50f2d735df3cd3984b1/models/pytorch_model.bin
-```
-{% endcode %}
-
 autodl下载模型
 
 {% code overflow="wrap" %}
 ```powershell
-modelscope download keepitsimple/faster-whisper-large-v3 --local_dir ./app/services/models/ASR/whisper/faster-whisper-large-v3
-
-modelscope download AI-ModelScope/XTTS-v2 --local_dir ./app/services/models/TTS/XTTS-v2
-
 modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
-
-# funasr
-modelscope download iic/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch --local_dir ./app/services/models/ASR/FunASR/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch
-
-modelscope download iic/speech_fsmn_vad_zh-cn-16k-common-pytorch --local_dir ./app/services/models/ASR/FunASR/speech_fsmn_vad_zh-cn-16k-common-pytorch
-
-modelscope download iic/punc_ct-transformer_cn-en-common-vocab471067-large --local_dir ./app/services/models/ASR/FunASR/punc_ct-transformer_cn-en-common-vocab471067-large
-
-modelscope download iic/speech_campplus_sv_zh-cn_16k-common --local_dir ./app/services/models/ASR/FunASR/speech_campplus_sv_zh-cn_16k-common
 ```
 {% endcode %}
 
