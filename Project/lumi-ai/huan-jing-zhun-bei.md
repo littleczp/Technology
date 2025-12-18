@@ -128,6 +128,10 @@ indextts2
 cd IndexTTS
 modelscope download --model IndexTeam/IndexTTS-2 --local_dir checkpoints
 
+pip install -U hf_transfer
+export HF_ENDPOINT=https://hf-mirror.com
+export HF_HUB_ENABLE_HF_TRANSFER=1
+
 huggingface-cli download --resume-download facebook/w2v-bert-2.0 --cache-dir ./checkpoints/hf_cache
 huggingface-cli download --resume-download amphion/MaskGCT semantic_codec/model.safetensors --cache-dir ./checkpoints/hf_cache
 huggingface-cli download --resume-download funasr/campplus campplus_cn_common.bin --cache-dir ./checkpoints/hf_cache
