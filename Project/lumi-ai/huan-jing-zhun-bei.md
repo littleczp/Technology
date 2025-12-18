@@ -53,7 +53,6 @@ git checkout main
 git pull
 
 pip install -e .[webui] 
-pip install torch==2.8.0+cu128 torchaudio==2.8.0+cu128 -f https://mirrors.aliyun.com/pytorch-wheels/cu128
 ```
 {% endtab %}
 
@@ -81,8 +80,6 @@ pip install protobuf==3.20.3
 pip install -r requirements.txt
 # 切换源
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org
-
-pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 
 # windows上安装indextts的依赖需要单独安装pynini
 conda install -c conda-forge pynini==2.1.6
@@ -131,4 +128,9 @@ indextts2
 cd IndexTTS
 modelscope download --model IndexTeam/IndexTTS-2 --local_dir checkpoints
 
+huggingface-cli download --resume-download facebook/w2v-bert-2.0 --cache-dir ./checkpoints/hf_cache
+huggingface-cli download --resume-download amphion/MaskGCT semantic_codec/model.safetensors --cache-dir ./checkpoints/hf_cache
+huggingface-cli download --resume-download funasr/campplus campplus_cn_common.bin --cache-dir ./checkpoints/hf_cache
+
 ```
+
