@@ -79,7 +79,7 @@ pip install protobuf==3.20.3
 ```sh
 # 有一些子模块的包版本要替换，ctranslate2
 pip install -r requirements.txt
-# （代理）安装
+# 切换源
 pip install -r requirements.txt -i https://pypi.org/simple --trusted-host pypi.org
 
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
@@ -104,6 +104,8 @@ conda install ffmpeg==7.0.2 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/clo
 ### FFMPEG-字体
 
 ```sh
+sudo apt update
+
 sudo apt install fonts-noto fonts-noto-cjk fonts-noto-core fonts-noto-extra fonts-noto-mono
 sudo apt install fonts-dejavu
 fc-list : family | grep -i noto
