@@ -105,6 +105,8 @@ sudo apt update
 
 sudo apt install fonts-noto fonts-noto-cjk fonts-noto-core fonts-noto-extra fonts-noto-mono
 sudo apt install fonts-dejavu
+sudo apt install fonts-noto-color-emoji
+
 fc-list : family | grep -i noto
 fc-list : family | grep -i dejavu
 
