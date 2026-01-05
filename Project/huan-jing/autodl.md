@@ -64,9 +64,43 @@ echo "XDG_CACHE_HOME: $XDG_CACHE_HOME"
 export HF_ENDPOINT=https://hf-mirror.com
 ```
 
-
-
 ```shellscript
 modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
 ```
 
+***
+
+## Devops
+
+autodl.sh
+
+```shellscript
+#!/bin/bash
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate ~/autodl-tmp/tmp/lumi-ai
+cd ~/autodl-tmp/lumi-ai
+uvicorn app.main:app --host 0.0.0.0 --port 8800
+```
+
+ecosystem.config.js
+
+```js
+module.exports = {
+    apps: [{
+        name: 'lumi-ai',
+        script: './autodl.sh',
+        instances: 1,
+        autorestart: true,
+        watch: false,
+        error_file: '~/autodl-tmp/lumi-ai/logs/error.log',
+        out_file: '~/autodl-tmp/lumi-ai/logs/out.log',
+        log_file: '~/autodl-tmp/lumi-ai/logs/combined.log',
+        time: true,
+        merge_logs: true,
+        log_date_format: 'YYYY-MM-DD HH:mm:ss',
+        env: {
+            "PYTHONUNBUFFERED": "1"
+        }
+    }]
+};
+```
