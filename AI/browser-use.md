@@ -38,7 +38,7 @@ os.environ["OPENAI_API_KEY"] = DASHSCOPE_API_KEY
 
 {% tabs %}
 {% tab title="幻觉" %}
-<table><thead><tr><th width="312.4163818359375">问题</th><th>原因</th><th>解决思路</th></tr></thead><tbody><tr><td><p></p><ol><li>在使用 write_file 工具时，模型猜测的参数错误，因此 Pydantic 抛出了 validation error。</li><li><strong>结果</strong>：报错后，模型试图重试，但逻辑被打断，导致执行了 unknown() 操</li></ol></td><td>模型觉得这个任务很复杂，所以它自作主张决定先写一个 todo.md 文件来做计划（日志中显示："thinking": "I should create a checklist..."）</td><td><p>prompt确规则：禁止它"做计划"</p><pre class="language-python"><code class="lang-python">Rules:
+<table><thead><tr><th width="312.4163818359375">幻觉问题</th><th>原因</th><th>解决思路</th></tr></thead><tbody><tr><td><p></p><ol><li>在使用 write_file 工具时，模型猜测的参数错误，因此 Pydantic 抛出了 validation error。</li><li><strong>结果</strong>：报错后，模型试图重试，但逻辑被打断，导致执行了 unknown() 操</li></ol></td><td>模型觉得这个任务很复杂，所以它自作主张决定先写一个 todo.md 文件来做计划（日志中显示："thinking": "I should create a checklist..."）</td><td><p>prompt确规则：禁止它"做计划"</p><pre class="language-python"><code class="lang-python">Rules:
     - No file creation. NO `write_file`.
 </code></pre><p><img src=".gitbook/assets/image.png" alt=""></p></td></tr><tr><td>在某些step时调用这个不存在的工具，导致一直阻塞和重试这个step</td><td>"幻觉"出了一个不存在的工具，类似 get_attribute 或 read_element 的工具来获取 href，但 browser-use <strong>并没有提供直接获取元素属性的工具</strong></td><td><p>明确告诉模型："不要尝试直接读取，而是运行 JavaScript 代码来提取链接"</p><pre class="language-python"><code class="lang-python">CRITICAL STEP.
     - Execute the 'execute_javascript' tool with the code below.
@@ -53,52 +53,41 @@ os.environ["OPENAI_API_KEY"] = DASHSCOPE_API_KEY
 
 {% tab title="一些工作原理" %}
 1. Agent 会调用一个“内容提取工具”（extract\_content 或类似）来提取内容，而这个工具的工作原理是把网页转换成 Markdown 文本。在 Markdown 文本模式下，网页背后的代码（如 href 属性）往往会被“清洗”掉，只剩下可见的文字（“下载视频”）
-2.
 {% endtab %}
 {% endtabs %}
 
-## Demo
+## 配置
 
 ```python
 import os
+
 # Disable telemetry
 os.environ["ANONYMIZED_TELEMETRY"] = "false"
 
-import asyncio
+browser_profile = BrowserProfile(
+    locale='en-US',
+    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    headless=True  # 无头
+)
 
-from langchain_deepseek import ChatDeepSeek
-from browser_use import Agent
-from dotenv import load_dotenv
-from pydantic import SecretStr
+task_prompt = """
+    ...
+"""
 
-load_dotenv()
+DASHSCOPE_API_KEY = "sk-xxx"
+os.environ["OPENAI_API_KEY"] = DASHSCOPE_API_KEY
 
-api_key = os.getenv('DEEPSEEK_API_KEY', '')
-if not api_key:
-    raise ValueError('DEEPSEEK_API_KEY is not set')
-
-
-async def main():
-    agent = Agent(
-        task=(
-            '1. Go to https://www.google.com '
-            "2. Search for 'browser use' in the search bar"
-            '3. Click on first result'
-            '4. Return the page source'
+agent = Agent(
+    browser_profile=browser_profile,
+    initial_actions=[{"open_tab": {"url": target_site}}],
+    task=task_prompt,
+    llm=ChatOpenAI(
+            api_key=SecretStr(DASHSCOPE_API_KEY),
+            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",  # 阿里云
+            model=model_name,
+            temperature=0.1
         ),
-        llm=ChatDeepSeek(
-            base_url='https://api.deepseek.com/v1',
-            model='deepseek-chat',
-            api_key=SecretStr(api_key),
-        ),
-        use_vision=False,
-    )
-
-    res = await agent.run()
-    print(res)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
-
+    use_vision=False,
+    max_actions_per_step=3,
+)
 ```
