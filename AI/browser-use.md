@@ -22,7 +22,7 @@ pip install browser-use
 playwright install
 ```
 
-编辑.env文件 或者 写入环境变量
+编辑.env文件 或者 .py写入环境变量
 
 ```python
 # .env
@@ -38,7 +38,7 @@ os.environ["OPENAI_API_KEY"] = DASHSCOPE_API_KEY
 
 {% tabs %}
 {% tab title="幻觉" %}
-<table><thead><tr><th width="312.4163818359375">幻觉问题</th><th>原因</th><th>解决思路</th></tr></thead><tbody><tr><td><p></p><ol><li>在使用 write_file 工具时，模型猜测的参数错误，因此 Pydantic 抛出了 validation error。</li><li><strong>结果</strong>：报错后，模型试图重试，但逻辑被打断，导致执行了 unknown() 操</li></ol></td><td>模型觉得这个任务很复杂，所以它自作主张决定先写一个 todo.md 文件来做计划（日志中显示："thinking": "I should create a checklist..."）</td><td><p>prompt确规则：禁止它"做计划"</p><pre class="language-python"><code class="lang-python">Rules:
+<table><thead><tr><th width="312.4163818359375">幻觉问题</th><th>原因</th><th>解决思路</th></tr></thead><tbody><tr><td><p></p><ol><li>在使用 write_file 工具时，模型猜测的参数错误，因此 Pydantic 抛出了 validation error。</li><li>报错后，模型试图重试，但逻辑被打断，导致执行了 unknown() 操作</li></ol></td><td>模型觉得这个任务很复杂，所以它自作主张决定先写一个 todo.md 文件来做计划（日志中显示："thinking": "I should create a checklist..."）</td><td><p>prompt确规则：禁止它"做计划"</p><pre class="language-python"><code class="lang-python">Rules:
     - No file creation. NO `write_file`.
 </code></pre><p><img src=".gitbook/assets/image.png" alt=""></p></td></tr><tr><td>在某些step时调用这个不存在的工具，导致一直阻塞和重试这个step</td><td>"幻觉"出了一个不存在的工具，类似 get_attribute 或 read_element 的工具来获取 href，但 browser-use <strong>并没有提供直接获取元素属性的工具</strong></td><td><p>明确告诉模型："不要尝试直接读取，而是运行 JavaScript 代码来提取链接"</p><pre class="language-python"><code class="lang-python">CRITICAL STEP.
     - Execute the 'execute_javascript' tool with the code below.
