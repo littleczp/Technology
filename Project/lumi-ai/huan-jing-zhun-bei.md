@@ -1,13 +1,5 @@
 # 环境准备
 
-## Conda
-
-```sh
-conda create -n lumi-ai python=3.10 -y
-
-conda remove --name lumi-ai --all
-```
-
 ## GPU
 
 ### CUDA
@@ -139,4 +131,3 @@ huggingface-cli download --resume-download amphion/MaskGCT semantic_codec/model.
 huggingface-cli download --resume-download funasr/campplus campplus_cn_common.bin --cache-dir ./checkpoints/hf_cache
 
 ```
-

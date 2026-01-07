@@ -30,6 +30,8 @@ conda env list
 
 conda create -n $project python=3.10 -y
 conda activate $project
+
+conda remove --name lumi-ai --all
 ```
 
 ***
