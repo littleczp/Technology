@@ -6,6 +6,7 @@
 
 * [SSH](huan-jing/ssh.md)
 * [Python](huan-jing/python.md)
+* [FFMPEG](huan-jing/ffmpeg.md)
 * [AutoDL](huan-jing/autodl.md)
 
 ## Lumi AI
