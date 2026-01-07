@@ -9,6 +9,10 @@
 * [FFMPEG](huan-jing/ffmpeg.md)
 * [AutoDL](huan-jing/autodl.md)
 
+## Lumi
+
+* [环境准备](lumi/huan-jing-zhun-bei.md)
+
 ## Lumi AI
 
 * [环境准备](lumi-ai/huan-jing-zhun-bei.md)
