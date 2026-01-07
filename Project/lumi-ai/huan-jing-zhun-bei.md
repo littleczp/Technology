@@ -83,6 +83,10 @@ pip install WeTextProcessing --no-deps
 
 镜像：[https://hf-mirror.com/](https://hf-mirror.com/)
 
+```
+export HF_ENDPOINT=https://hf-mirror.com
+```
+
 多线程下载器
 
 ```sh
