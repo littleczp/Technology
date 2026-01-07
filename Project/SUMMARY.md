@@ -12,14 +12,12 @@
 ## Lumi
 
 * [环境准备](lumi/huan-jing-zhun-bei.md)
+* [飞行记录](lumi/fei-xing-ji-lu.md)
 
 ## Lumi AI
 
 * [环境准备](lumi-ai/huan-jing-zhun-bei.md)
-
-***
-
-* [飞行记录](fei-xing-ji-lu.md)
+* [飞行记录](lumi-ai/fei-xing-ji-lu.md)
 
 ## Serverless AI
 

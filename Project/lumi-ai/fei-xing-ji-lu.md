@@ -1,36 +1,5 @@
 # 飞行记录
 
-Shell
-
-{% code overflow="wrap" %}
-```sh
-uvicorn app.main:app --host 0.0.0.0 --port 8800 --reload --reload-dir ./app/
-```
-{% endcode %}
-
-pm2
-
-{% code overflow="wrap" %}
-```sh
-pm2 start uvicorn --name lumi-ai --interpreter /.../miniconda3/envs/lumi-ai/bin/python3.10 -- --host 0.0.0.0 --port 8188 --workers 2 app.main:app
-```
-{% endcode %}
-
-ngrok
-
-```sh
-# 查看配置
-cat ~/.config/ngrok/ngrok.yml
-```
-
-github lfs
-
-```sh
-git lfs track "app/backend/models/**"
-git lfs track "app/backend/ffmpeg/**"
-git add .gitattributes
-```
-
 ## 优化
 
 <details>
@@ -136,8 +105,6 @@ VAD\_SEGMENTATION\_URL has Expired\
 [issue](https://github.com/m-bain/whisperX/issues/943)\
 [solved](https://github.com/m-bain/whisperX/pull/944/files)
 
-
-
 解决：替换load\_vad\_model函数
 
 ```python
@@ -215,8 +182,6 @@ ctranslate2==3.24.0 -> requirements
 vim /root/miniconda3/envs/linly_dubbing/lib/python3.10/site-packages/whisperx/alignment.py
 ```
 {% endcode %}
-
-
 
 {% code overflow="wrap" %}
 ```python
