@@ -6,11 +6,11 @@
 {% endtab %}
 
 {% tab title="缓存击穿" %}
-
+<table><thead><tr><th width="159.291259765625">术语</th><th width="551.1198120117188">原理</th></tr></thead><tbody><tr><td>Hotspot Invalid</td><td><p>某个热点的key失效，大并发集中对其进行请求，</p><p>造成大量请求读缓存没读到数据，从而导致高并发访问数据库，引起数据库压力剧增</p></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="缓存穿透" %}
-
+<table><thead><tr><th width="159.291259765625">术语</th><th width="551.1198120117188">原理</th></tr></thead><tbody><tr><td>Cache Penetration</td><td><p>用户请求的数据在缓存中不存在即没有命中，同时在数据库中也不存在，</p><p>导致用户每次请求该数据都要去数据库中查询一遍</p></td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
