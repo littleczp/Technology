@@ -16,4 +16,4 @@
 
 * [数据结构](redis-she-ji-yu-shi-xian/shu-ju-jie-gou.md)
 * [哈希表](redis-she-ji-yu-shi-xian/ha-xi-biao.md)
-* [持久化](redis-she-ji-yu-shi-xian/chi-jiu-hua.md)
+* [持久化](chi-jiu-hua.md)
