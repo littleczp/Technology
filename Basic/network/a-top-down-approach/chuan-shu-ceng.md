@@ -24,3 +24,17 @@
 * 设置time\_wait时间
 
 </details>
+
+
+
+{% tabs %}
+{% tab title="SYN队列（半连接状态队列）" %}
+每个客户端发来的SYN报文，服务器都会把这个报文放到半连接状态队列里管理，此时服务器端口处于SYN\_RCVD状态，之后服务器会向客户端发送SYN+ACK报文
+{% endtab %}
+
+{% tab title="ACCEPT队列（全连接状态队列）" %}
+当服务器接收到客户端的ACK报文后，就会将半连接队列里面对应的报文转移到全连接队列，
+
+此时服务器端口处于ESTABLISHED状态
+{% endtab %}
+{% endtabs %}
