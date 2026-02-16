@@ -51,3 +51,5 @@
 
 * [聚类](machine-learning/ju-lei/README.md)
   * [K-means clustering](machine-learning/ju-lei/k-means-clustering.md)
+* [Math](machine-learning/math/README.md)
+  * [期望值](machine-learning/math/qi-wang-zhi.md)
