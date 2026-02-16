@@ -27,6 +27,21 @@
 
 <summary>HTTP/2.x的缺陷</summary>
 
-HTTP/2 使用了多路复用，一般来说同一域名下只需要使用一个 TCP 连接。在出现丢包的情况下，整个 TCP 都要开始等待重传，也就导致了后面的所有数据都被阻塞了
+HTTP/2 使用了多路复用，一般来说同一域名下只需要使用一个 TCP 连接。但在出现丢包的情况下，整个 TCP 都要开始等待重传，也就导致了后面的所有数据都被阻塞了
+
+</details>
+
+***
+
+<details>
+
+<summary>DNS</summary>
+
+Domain name system runs over UDP and uses port 53
+
+| root DNS servers                   | provide the IP addresses of the TLD servers            |                                                                |
+| ---------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------- |
+| top-level domain (TLD) DNS servers | provide the IP addresses for authoritative DNS servers | <p>com, org, net, edu, and gov</p><p>uk, fr, ca, cn and jp</p> |
+| authoritative DNS servers          | Every organization with publicly accessible hosts      | Web servers(google)                                            |
 
 </details>
