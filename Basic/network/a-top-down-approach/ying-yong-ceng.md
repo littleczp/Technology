@@ -39,9 +39,9 @@ HTTP/2 使用了多路复用，一般来说同一域名下只需要使用一个 
 
 Domain name system runs over UDP and uses port 53
 
-| root DNS servers                   | provide the IP addresses of the TLD servers            |                                                                |
-| ---------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------- |
-| top-level domain (TLD) DNS servers | provide the IP addresses for authoritative DNS servers | <p>com, org, net, edu, and gov</p><p>uk, fr, ca, cn and jp</p> |
-| authoritative DNS servers          | Every organization with publicly accessible hosts      | Web servers(google)                                            |
+| root DNS servers                   | provide the IP addresses of the TLD servers            |                                                               |
+| ---------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------- |
+| top-level domain (TLD) DNS servers | provide the IP addresses for authoritative DNS servers | <p>com, org, net, edu, gov...</p><p>uk, fr, ca, cn and jp</p> |
+| authoritative DNS servers          | Every organization with publicly accessible hosts      | Web servers(google)                                           |
 
 </details>
