@@ -15,3 +15,4 @@
   * [进程](os/cao-zuo-xi-tong-dao-lun/jin-cheng.md)
   * [进程API](os/cao-zuo-xi-tong-dao-lun/jin-cheng-api.md)
   * [上下文](os/cao-zuo-xi-tong-dao-lun/shang-xia-wen.md)
+  * [IPC](os/cao-zuo-xi-tong-dao-lun/ipc.md)

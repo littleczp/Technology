@@ -1,16 +1,22 @@
 # 请求google.com
 
-{% tabs %}
-{% tab title="DHCP" %}
+{% stepper %}
+{% step %}
+### DHCP
+
 obtain an IP address
-{% endtab %}
+{% endstep %}
 
-{% tab title="DNS" %}
+{% step %}
+### DNS
+
 know the IP address of Google.com
-{% endtab %}
+{% endstep %}
 
-{% tab title="TCP and HTTP" %}
+{% step %}
+### TCP and HTTP
+
 1. three-way handshake
 2. creates the HTTP GET message
-{% endtab %}
-{% endtabs %}
+{% endstep %}
+{% endstepper %}
