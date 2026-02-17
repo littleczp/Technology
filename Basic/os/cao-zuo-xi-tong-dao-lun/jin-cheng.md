@@ -4,10 +4,7 @@
 
 <summary>并发与并行</summary>
 
-|                 | 依赖                 | Desc                                     |
-| --------------- | ------------------ | ---------------------------------------- |
-| 并发(Concurrency) | 时分共享（Time Sharing） | 通过让一个进程只运行一个时间片，然后切换到其他进程，从而实现用户运行多个并发进程 |
-| 并行(Parallelism) | 多核CPU              | 依赖物理硬件资源，使得多个任务在同一时刻同时运行                 |
+<table><thead><tr><th width="166.230224609375"></th><th width="216.91876220703125">依赖</th><th>Desc</th></tr></thead><tbody><tr><td>并发(Concurrency)</td><td>时分共享（Time Sharing）</td><td>通过让一个进程只运行一个时间片，然后切换到其他进程，从而实现用户运行多个并发进程</td></tr><tr><td>并行(Parallelism)</td><td>多核CPU</td><td>依赖物理硬件资源，使得多个任务在同一时刻同时运行</td></tr></tbody></table>
 
 </details>
 
