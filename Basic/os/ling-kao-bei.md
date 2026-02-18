@@ -4,7 +4,17 @@
 
 减少在传输过程中不必要的数据复制（**在内存之间，不需要 CPU 参与数据的搬运**）
 
+1. **mmap + write**
+2. **sendfile**
+3. **splice**
 
+<details>
+
+<summary>什么时候不能用零拷贝</summary>
+
+程序需要“修改”数据
+
+</details>
 
 ## 原理
 
@@ -57,6 +67,6 @@ sendfile(socket, file, len); // ≥ Linux 2.1
 {% step %}
 ### DMA Gather
 
-网卡直接通过 DMA，去**内核缓冲区**里拿数据
+网卡直接通过 DMA，去**内核缓冲区**里拿数据（≥ Linux 2.4）
 {% endstep %}
 {% endstepper %}
