@@ -2,11 +2,13 @@
 
 ## 概念
 
-减少在数据传输过程中不必要的数据复制
+减少在传输过程中不必要的数据复制（**在内存之间，不需要 CPU 参与数据的搬运**）
 
 
 
-## 目的
+## 原理
+
+### 文件服务器发送文件
 
 ```c
 // 1. 从硬盘读取数据到内存
@@ -41,3 +43,20 @@ Socket 缓冲区 -> 网卡。(硬件负责)
 {% endstep %}
 {% endstepper %}
 
+```c
+sendfile(socket, file, len); // ≥ Linux 2.1
+```
+
+{% stepper %}
+{% step %}
+### DMA 拷贝
+
+硬盘 -> 内核缓冲区 (DMA)。(硬件负责，CPU 不参与)
+{% endstep %}
+
+{% step %}
+### DMA Gather
+
+网卡直接通过 DMA，去**内核缓冲区**里拿数据
+{% endstep %}
+{% endstepper %}
