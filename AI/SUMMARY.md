@@ -9,10 +9,7 @@
 ## Agent
 
 * [Agent](agent/agent.md)
-
-***
-
-* [Browser Use](browser-use.md)
+* [Browser Use](agent/browser-use.md)
 
 ## Image
 
@@ -21,11 +18,8 @@
 ## Video
 
 * [Sora](video/sora.md)
-
-***
-
-* [ASR](asr.md)
-* [TTS](tts.md)
+* [ASR](video/asr.md)
+* [TTS](video/tts.md)
 
 ## 基于GPT-3、ChatGPT、GPT-4等Transformer架构的自然语言处理
 
