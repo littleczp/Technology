@@ -35,7 +35,6 @@
 
 * [Transformer模型架构入门](transformer-mo-xing-jia-gou-ru-men/README.md)
   * [Transformer 架构](transformer-mo-xing-jia-gou-ru-men/transformer-jia-gou.md)
-  * [Hugging Face 的 Transformer 模型](transformer-mo-xing-jia-gou-ru-men/hugging-face-de-transformer-mo-xing.md)
 * [使用Transformer处理下游NLP任务](shi-yong-transformer-chu-li-xia-you-nlp-ren-wu.md)
 * [什么是机器翻译](shen-me-shi-ji-qi-fan-yi.md)
 * [GPT-3](gpt-3/README.md)
