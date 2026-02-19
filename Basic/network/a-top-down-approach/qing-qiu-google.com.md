@@ -2,19 +2,19 @@
 
 {% stepper %}
 {% step %}
-### DHCP
+#### DHCP
 
 obtain an IP address
 {% endstep %}
 
 {% step %}
-### DNS
+#### DNS
 
 know the IP address of Google.com
 {% endstep %}
 
 {% step %}
-### TCP and HTTP
+#### TCP and HTTP
 
 1. three-way handshake
 2. creates the HTTP GET message

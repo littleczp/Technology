@@ -25,4 +25,4 @@
 ## Language
 
 * [Go](language/go/README.md)
-  * [GMP](language/go/gmp.md)
+  * [GPM](language/go/gpm.md)
