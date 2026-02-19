@@ -56,7 +56,7 @@ os.environ["OPENAI_API_KEY"] = DASHSCOPE_API_KEY
 {% endtab %}
 {% endtabs %}
 
-## 实用配置demo
+## Demo
 
 ```python
 import os
