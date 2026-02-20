@@ -2,14 +2,15 @@
 
 * [AI](README.md)
 
-## LLM
+## Basic
 
-* [RAG](llm/rag.md)
+* [RAG](basic/rag.md)
+* [Agent](basic/agent.md)
 
-## Agent
+## Application
 
-* [Agent](agent/agent.md)
-* [Browser Use](agent/browser-use.md)
+* [Browser Use](application/browser-use.md)
+* [Clawbot](application/clawbot.md)
 
 ## Image
 
