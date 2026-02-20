@@ -10,7 +10,7 @@
 ## Application
 
 * [Browser Use](application/browser-use.md)
-* [Clawbot](application/clawbot.md)
+* [Clawdbot](application/clawdbot.md)
 
 ## Image
 
