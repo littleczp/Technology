@@ -25,8 +25,8 @@
 ## 基于GPT-3、ChatGPT、GPT-4等Transformer架构的自然语言处理
 
 * [Transformer模型介绍](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/transformer-mo-xing-jie-shao.md)
-* [Transformer模型架构入门](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/transformer-mo-xing-jia-gou-ru-men/README.md)
-  * [Transformer 架构](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/transformer-mo-xing-jia-gou-ru-men/transformer-jia-gou.md)
+* [Transformer 模型架构入门](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/transformer-mo-xing-jia-gou-ru-men.md)
+* [Transformer 架构](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/transformer-jia-gou.md)
 * [使用Transformer处理下游NLP任务](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/shi-yong-transformer-chu-li-xia-you-nlp-ren-wu.md)
 * [什么是机器翻译](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/shen-me-shi-ji-qi-fan-yi.md)
 * [GPT-3](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/gpt-3/README.md)

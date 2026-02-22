@@ -4,7 +4,7 @@ description: Attention is All You Need
 
 # Transformer 架构
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="375"><figcaption><p>原始 Transformer 模型架构</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption><p>原始 Transformer 模型架构</p></figcaption></figure>
 
 左侧是6层的编码器堆叠，右侧是6层的解码器堆叠。
 
