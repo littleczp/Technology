@@ -4,7 +4,10 @@
 
 <figure><img src="../.gitbook/assets/image (2).png" alt="" width="306"><figcaption></figcaption></figure>
 
-## 人类转导和翻译
+<details>
 
-人类的转导是将语言 A 中的一个句子转化为对该句子意义的认知表示。比如翻译人员会将语言 A 的句子转导为语言 B 对句子的解释。
+<summary>中文-英语，英语-中文的机器翻译过程是一样的吗？</summary>
 
+不一样。在"宏观系统架构"（Transformer）上是完全一样的，但中英语言学结构的差异导致了Tokenizer 分词处理不同、注意力权重矩阵（Attention Map）的分布完全不对称。
+
+</details>
