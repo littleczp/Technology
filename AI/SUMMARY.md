@@ -28,8 +28,7 @@
 * [Transformer 架构](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/transformer-jia-gou.md)
 * [使用Transformer处理下游NLP任务](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/shi-yong-transformer-chu-li-xia-you-nlp-ren-wu.md)
 * [什么是机器翻译](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/shen-me-shi-ji-qi-fan-yi.md)
-* [GPT-3](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/gpt-3/README.md)
-  * [OpenAI GPT Transformer 模型的架构](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/gpt-3/openai-gpt-transformer-mo-xing-de-jia-gou.md)
+* [GPT-3](ji-yu-gpt3chatgptgpt4-deng-transformer-jia-gou-de-zi-ran-yu-yan-chu-li/gpt-3.md)
 
 ## Machine Learning
 
