@@ -2,12 +2,16 @@
 
 ## Conda
 
+{% tabs %}
+{% tab title="创建环境" %}
 ```shellscript
 conda create --prefix ~/autodl-tmp/tmp/lumi-ai python=3.10 -y
 conda activate ~/autodl-tmp/tmp/lumi-ai
 ```
+{% endtab %}
 
-autodl写入 \~/.bashrc 可以自动加载conda
+{% tab title="自动加载" %}
+写入 \~/.bashrc 可以自动加载conda
 
 ```bash
 # 初始化 conda
@@ -24,12 +28,11 @@ if conda env list | grep -q "autodl-tmp/tmp/lumi-ai"; then
     conda activate ~/autodl-tmp/tmp/lumi-ai
 fi
 ```
+{% endtab %}
 
-设置conda下载缓存
-
-```bash
-#!/bin/bash
-
+{% tab title="设置conda下载缓存" %}
+<pre class="language-bash"><code class="lang-bash"><strong>#!/bin/bash
+</strong>
 # 设置绝对路径
 PIP_CACHE="~/autodl-tmp/tmp"
 SYSTEM_CACHE="~/autodl-tmp/tmp"
@@ -52,7 +55,9 @@ pip config set global.cache-dir "$PIP_CACHE"
 echo "设置完成！"
 echo "PIP_CACHE_DIR: $PIP_CACHE_DIR"
 echo "XDG_CACHE_HOME: $XDG_CACHE_HOME"
-```
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
 ***
 
