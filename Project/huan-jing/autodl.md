@@ -77,29 +77,29 @@ modelscope download qwen/Qwen3-4B --local_dir ./app/services/models/LLM/Qwen3-4B
 
 ## Devops
 
-autodl.sh
-
+{% tabs %}
+{% tab title="通过shell启动Python项目" %}
 ```shellscript
 #!/bin/bash
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate ~/autodl-tmp/tmp/lumi-ai
-cd ~/autodl-tmp/lumi-ai
+conda activate ~/autodl-tmp/tmp/xxx
+cd ~/autodl-tmp/xxx
 uvicorn app.main:app --host 0.0.0.0 --port 8800
 ```
+{% endtab %}
 
-ecosystem.config.js
-
+{% tab title="ecosystem.config.js编排" %}
 ```js
 module.exports = {
     apps: [{
-        name: 'lumi-ai',
+        name: 'xxx',
         script: './autodl.sh',
         instances: 1,
         autorestart: true,
         watch: false,
-        error_file: '~/autodl-tmp/lumi-ai/logs/error.log',
-        out_file: '~/autodl-tmp/lumi-ai/logs/out.log',
-        log_file: '~/autodl-tmp/lumi-ai/logs/combined.log',
+        error_file: '~/autodl-tmp/xxx/logs/error.log',
+        out_file: '~/autodl-tmp/xxx/logs/out.log',
+        log_file: '~/autodl-tmp/xxx/logs/combined.log',
         time: true,
         merge_logs: true,
         log_date_format: 'YYYY-MM-DD HH:mm:ss',
@@ -109,3 +109,5 @@ module.exports = {
     }]
 };
 ```
+{% endtab %}
+{% endtabs %}
