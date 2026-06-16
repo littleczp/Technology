@@ -22,7 +22,8 @@
 * [零拷贝](os/ling-kao-bei.md)
 * [COW](os/cow.md)
 
-## Language
+## Language & Others
 
-* [Go](language/go/README.md)
-  * [GPM](language/go/gpm.md)
+* [OOP](language-and-others/oop.md)
+* [Go](language-and-others/go/README.md)
+  * [GPM](language-and-others/go/gpm.md)
