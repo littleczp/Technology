@@ -16,3 +16,13 @@
 
 </details>
 
+
+
+<details>
+
+<summary>GO为什么在高并发场景性能更佳</summary>
+
+因为 goroutine 足够轻量（2KB），runtime 调度器能把大量 goroutine 复用到少量 OS 线程上；网络 IO 底层结合 epoll/kqueue 等多路复用机制，让同步写法具备高并发能力
+
+</details>
+
