@@ -50,4 +50,8 @@ G 表示 goroutine，M 是系统线程（Machine），P 是调度器上下文（
 
 Go 的网络模型对上层暴露的是同步阻塞式 API，比如 `Read`、`Write`、`Accept`，但底层网络 fd 实际是 non-blocking 的。runtime 会结合 epoll（Linux）、kqueue（MacOS） 这类 IO 多路复用机制实现 netpoller。当 goroutine 读写网络遇到暂时不可读或不可写时，不会让 OS 线程一直阻塞，而是把 goroutine 挂起到 netpoller，M 继续执行其他 goroutine。等 fd 就绪后，netpoller 再把 goroutine 放回运行队列，由调度器恢复执行。
 
+
+
+不过 Go 网络模型并不等于无限并发。线上还要关注连接数上限、fd 限制、读写 deadline、慢连接、backlog、内存占用、GC 压力，以及业务处理是否阻塞调度。真正的高并发能力来自 runtime 模型和工程治理一起配合。
+
 </details>
