@@ -31,3 +31,4 @@
 * [OOP](language-and-others/oop.md)
 * [Go](language-and-others/go/README.md)
   * [GPM](language-and-others/go/gpm.md)
+* [Python](language-and-others/python.md)
