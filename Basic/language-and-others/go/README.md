@@ -26,3 +26,16 @@
 
 </details>
 
+
+
+<details>
+
+<summary>GO中goroutine调度</summary>
+
+Go runtime 通过 **GMP 调度模型**，把大量 goroutine 调度到少量操作系统线程上执行，从而以较低成本支撑高并发。
+
+
+
+G 表示 goroutine，M 是系统线程，P 是调度器上下文。M 必须绑定 P 才能执行 G。每个 P 有本地队列，调度器优先从本地队列取 G，没任务时从全局队列或其他 P 获取任务。网络 IO 会交给 netpoller，系统调用阻塞时 P 会和 M 分离，从而避免一个阻塞线程拖住整个调度器。这个模型让 Go 能用较少线程支撑大量 goroutine，并且较好利用多核 CPU。
+
+</details>
