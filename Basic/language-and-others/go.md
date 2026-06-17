@@ -48,10 +48,6 @@ G 表示 goroutine，M 是系统线程（Machine），P 是调度器上下文（
 
 <summary>GO的网络模型</summary>
 
-Go的网络模型主要基于 I/O Multiplexing 和 Goroutine Scheduler（非阻塞IO）
-
-I/O Multiplexing：不同系统下实现有所不同(select、epoll、kqueue)，在Linux系统下基于epoll
-
-<table data-header-hidden><thead><tr><th>I/O 多路复用</th><th>desc</th><th valign="middle">compare</th></tr></thead><tbody><tr><td>select</td><td>监视一组文件描述符，等待其中的一个或多个变为可读、可写或有异常</td><td valign="middle"><p></p><ol><li>开销大，需要从将用户态的文件描述符拷贝到内核态</li><li>每次循环都需要清空描述符集合，所以每一次循环都需要解决所有就绪的IO事件</li><li>select需要固定数组的大小来存储监视的文件描述符（Linux 1024，bit array），所以也限制了最大连接数</li></ol></td></tr><tr><td>epoll</td><td><p>允许程序注册感兴趣的事件，当这些事件发生时，epoll会通知程序<br> </p><p>通过epoll create创建epoll实例，通过epoll ctrol将文件描述符添加到epoll实例中。使用epoll wait获取所有就绪的文件描述符</p></td><td valign="middle"><p>显著提高程序在高并发连接中，只有少量是活跃的情况下的系统CPU利用率</p><p>它无须遍历整个被侦听的描述符集（poll需要遍历整个链表/数组），只要遍历那些被内核IO事件异步唤醒而加入Ready队列的描述符集合</p></td></tr></tbody></table>
+Go 的网络模型对上层暴露的是同步阻塞式 API，比如 `Read`、`Write`、`Accept`，但底层网络 fd 实际是 non-blocking 的。runtime 会结合 epoll（Linux）、kqueue（MacOS） 这类 IO 多路复用机制实现 netpoller。当 goroutine 读写网络遇到暂时不可读或不可写时，不会让 OS 线程一直阻塞，而是把 goroutine 挂起到 netpoller，M 继续执行其他 goroutine。等 fd 就绪后，netpoller 再把 goroutine 放回运行队列，由调度器恢复执行。
 
 </details>
