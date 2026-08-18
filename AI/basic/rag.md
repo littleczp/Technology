@@ -43,6 +43,20 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 <details>
 
+<summary>构建知识库时，如何选择文本切块策略？</summary>
+
+在构建知识库（RAG系统）时，选择切块大小（Chunk Size）与重叠长度（Chunk Overlap）的本质，是在**检索精确度**与**上下文完整性**之间做工程权衡。通常以 512 token 为起点，重叠设为切块的 10%–25%，并根据问答场景与文档结构进行动态调优。
+
+<table><thead><tr><th width="214.15911865234375">切块（Chunk Size）</th><th width="236.87109375">优</th><th>劣</th></tr></thead><tbody><tr><td>小（128～256 token）<br>场景：FAQ/客服</td><td>语义更加聚焦，匹配更精准，抗噪声能力强</td><td>割裂上下文，导致 LLM 拿到碎片化信息，增加理解难度和幻觉风险</td></tr><tr><td>大（1024～2047 token）<br>场景：法律合同/技术文档<br></td><td>上下文完整连贯，LLM 更容易做深度的推理与总结</td><td>向量检索时容易引入无关噪声；同时占用更多窗口空间，降低召回数量。</td></tr></tbody></table>
+
+<table><thead><tr><th width="220.16741943359375">重叠长度（Chunk Overlap）</th><th width="354.59515380859375"></th></tr></thead><tbody><tr><td>小（&#x3C;5%）</td><td>无法起到平滑过渡与语义衔接的作用</td></tr><tr><td>大（30%）</td><td>导致存储冗余膨胀，且在检索时容易召回大量重复相似的片段。</td></tr></tbody></table>
+
+</details>
+
+
+
+<details>
+
 <summary>检索增强生成和语义搜索有什么区别？</summary>
 
 语义搜索超越了关键词搜索，根据输入字符串的**概念相似性**来查找相关的上下文数据。所以语义搜索能够理解用户的意图和上下文。
@@ -52,6 +66,8 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 语义搜索可以完善 RAG 结果，是 RAG 的前半部分。
 
 </details>
+
+
 
 
 
