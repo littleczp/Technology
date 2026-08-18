@@ -6,7 +6,7 @@
 
 * [RAG](basic/rag.md)
 * [Agent](basic/agent.md)
-* [Page 1](basic/page-1.md)
+* [MCP](basic/mcp.md)
 
 ## Application
 
