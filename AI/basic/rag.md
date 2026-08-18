@@ -4,6 +4,8 @@ description: Retrieval Augmented Generation
 
 # RAG
 
+## RAG核心原理
+
 <details>
 
 <summary>什么是RAG？</summary>
@@ -24,8 +26,6 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 </details>
 
-
-
 <details>
 
 <summary>为什么需要RAG？</summary>
@@ -39,7 +39,7 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 </details>
 
-
+## RAG知识库搭建
 
 <details>
 
@@ -47,9 +47,22 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 在构建知识库（RAG系统）时，选择切块大小（Chunk Size）与重叠长度（Chunk Overlap）的本质，是在**检索精确度**与**上下文完整性**之间做工程权衡。通常以 512 token 为起点，重叠设为切块的 10%–25%，并根据问答场景与文档结构进行动态调优。
 
-<table><thead><tr><th width="214.15911865234375">切块（Chunk Size）</th><th width="236.87109375">优</th><th>劣</th></tr></thead><tbody><tr><td>小（128～256 token）<br>场景：FAQ/客服</td><td>语义更加聚焦，匹配更精准，抗噪声能力强</td><td>割裂上下文，导致 LLM 拿到碎片化信息，增加理解难度和幻觉风险</td></tr><tr><td>大（1024～2047 token）<br>场景：法律合同/技术文档<br></td><td>上下文完整连贯，LLM 更容易做深度的推理与总结</td><td>向量检索时容易引入无关噪声；同时占用更多窗口空间，降低召回数量。</td></tr></tbody></table>
+<table><thead><tr><th width="214.15911865234375">切块（Chunk Size）</th><th width="236.87109375">优</th><th>劣</th></tr></thead><tbody><tr><td>小（128～256 token）<br>场景：FAQ/客服</td><td>语义更加聚焦，匹配更精准，抗噪声能力强</td><td>割裂上下文，导致 LLM 拿到碎片化信息，增加理解难度和幻觉风险</td></tr><tr><td>大（1024～2047 token）<br>场景：法律合同/技术文档<br></td><td>上下文完整连贯，LLM 更容易做深度的推理与总结</td><td>向量检索时容易引入无关噪声；同时占用更多上下文窗口空间（Context）。</td></tr></tbody></table>
 
 <table><thead><tr><th width="220.16741943359375">重叠长度（Chunk Overlap）</th><th width="354.59515380859375"></th></tr></thead><tbody><tr><td>小（&#x3C;5%）</td><td>无法起到平滑过渡与语义衔接的作用</td></tr><tr><td>大（30%）</td><td>导致存储冗余膨胀，且在检索时容易召回大量重复相似的片段。</td></tr></tbody></table>
+
+***
+
+高级切块
+
+实际工程中，单纯按字数硬切（Fixed-size Chunking）效果往往不佳
+
+*   语义切块
+
+    优先按句号、换行符（`\n\n`）、Markdown 标题（`#`）或 HTML 标签切分，确保一个切块是一段完整的语义。
+*   父子切块
+
+    在数据库里存储大预测块（Parent，保留上下文），但索引和检索时使用小切块（Child，精准命中）。检索到小切块后，把对应的大切块喂给大模型。
 
 </details>
 
