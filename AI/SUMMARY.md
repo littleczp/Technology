@@ -4,9 +4,9 @@
 
 ## Basic
 
-* [RAG](basic/rag.md)
 * [Agent](basic/agent.md)
 * [MCP](basic/mcp.md)
+* [RAG](basic/rag.md)
 
 ## Application
 

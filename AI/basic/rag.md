@@ -52,3 +52,17 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 语义搜索可以完善 RAG 结果，是 RAG 的前半部分。
 
 </details>
+
+
+
+RAG 与 MCP 的关系？
+
+{% tabs %}
+{% tab title="RAG 作为 MCP 的 Tool" %}
+一个做好的 RAG 系统封装成一个 MCP Tool
+{% endtab %}
+
+{% tab title="MCP 为 RAG 提供数据源" %}
+MCP 标准化了数据访问方式。RAG 系统可以通过 MCP 客户端直接去读取各种各类 MCP 服务器连接的数据源
+{% endtab %}
+{% endtabs %}
