@@ -102,7 +102,7 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 <table><thead><tr><th width="214.15911865234375">切块（Chunk Size）</th><th width="236.87109375">优</th><th>劣</th></tr></thead><tbody><tr><td>小（128～256 token）<br>场景：FAQ/客服</td><td>语义更加聚焦，匹配更精准，抗噪声能力强</td><td>割裂上下文，导致 LLM 拿到碎片化信息，增加理解难度和幻觉风险</td></tr><tr><td>大（1024～2047 token）<br>场景：法律合同/技术文档<br></td><td>上下文完整连贯，LLM 更容易做深度的推理与总结</td><td>向量检索时容易引入无关噪声；同时占用更多上下文窗口空间（Context）。</td></tr></tbody></table>
 
-<table><thead><tr><th width="220.16741943359375">重叠长度（Chunk Overlap）</th><th width="354.59515380859375"></th></tr></thead><tbody><tr><td>小（&#x3C;5%）</td><td>无法起到平滑过渡与语义衔接的作用</td></tr><tr><td>大（30%）</td><td>导致存储冗余膨胀，且在检索时容易召回大量重复相似的片段。</td></tr></tbody></table>
+<table><thead><tr><th width="220.16741943359375">重叠长度（Chunk Overlap）</th><th width="354.59515380859375">问题</th></tr></thead><tbody><tr><td>小（&#x3C;5%）</td><td>无法起到平滑过渡与语义衔接的作用</td></tr><tr><td>大（30%）</td><td>导致存储冗余膨胀，且在检索时容易召回大量重复相似的片段。</td></tr></tbody></table>
 
 ***
 
@@ -116,6 +116,27 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 *   父子切块
 
     在数据库里存储大预测块（Parent，保留上下文），但索引和检索时使用小切块（Child，精准命中）。检索到小切块后，把对应的大切块喂给大模型。
+
+</details>
+
+<details>
+
+<summary><strong>如何选择一个合适的嵌入模型？评估一个 Embedding 模型的好坏有哪些指标？</strong></summary>
+
+评估和选择 Embedding 模型，通常从**性能指标**、**业务匹配度**和**工程成本**三个维度来考量。
+
+***
+
+1. 准确率相关指标（核心）
+
+* NDCG@K（归一化折损累计增益）：不仅看有没有把相关文档找出来，还看排序是否合理
+* MRR@K（平均倒数排名）：关注第一个正确答案排在第几位
+* Recall@K（召回率）：前 K 个结果中，包含了多少比例的真正相关文档
+
+2. 模型本身的技术指标
+
+* MTEB 榜单排名：Massive Text Embedding Benchmark（MTEB）是目前全球公认最权威的 Embedding 模型评测大榜
+* 上下文窗口（Context Window）：单次最高支持输入多少 Token（如 512, 8k 甚至 32k）
 
 </details>
 
