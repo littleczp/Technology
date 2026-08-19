@@ -9,11 +9,6 @@
 * [FFMPEG](huan-jing/ffmpeg.md)
 * [AutoDL](huan-jing/autodl.md)
 
-## Lumi AI
-
-* [环境准备](lumi-ai/huan-jing-zhun-bei.md)
-* [飞行记录](lumi-ai/fei-xing-ji-lu.md)
-
 ## Serverless AI
 
 * [Modal](serverless-ai/modal.md)
