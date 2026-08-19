@@ -123,7 +123,7 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 <summary>如何选择一个合适的嵌入模型？评估一个 Embedding 模型的好坏有哪些指标？</summary>
 
-评估和选择 Embedding 模型，通常从**性能指标**、**业务匹配度**和**工程成本**三个维度来考量。
+评估和选择 Embedding 模型，通常从**业务匹配度、性能指标**、和**工程成本**三个维度来考量。
 
 ***
 
