@@ -55,7 +55,7 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 1. 数据解析与清洗
 
-* 多格式解析：PDF、HTML、Markdown
+* 多格式解析：Json、PDF、HTML、Markdown
 * 噪声消除：无意义空格、特殊符号、广告文本
 * 元数据提取：在文本保留的同时，提取出作者、发布时间、章节标题、文档分类等**元数据（Metadata）**，用于后续的混合检索。
 
