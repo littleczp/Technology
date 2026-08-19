@@ -2,12 +2,17 @@
 
 * [Project](README.md)
 
-## 环境
+## 原型
 
-* [SSH](huan-jing/ssh.md)
-* [Python](huan-jing/python.md)
-* [FFMPEG](huan-jing/ffmpeg.md)
-* [AutoDL](huan-jing/autodl.md)
+* [meoo](yuan-xing/meoo.md)
+* [WeaveFox](yuan-xing/weavefox.md)
+
+## 自建
+
+* [SSH](zi-jian/ssh.md)
+* [Python](zi-jian/python.md)
+* [FFMPEG](zi-jian/ffmpeg.md)
+* [AutoDL](zi-jian/autodl.md)
 
 ## Serverless AI
 
