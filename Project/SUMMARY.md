@@ -7,16 +7,16 @@
 * [meoo](yuan-xing/meoo.md)
 * [WeaveFox](yuan-xing/weavefox.md)
 
+## Serverless AI
+
+* [Modal](serverless-ai/modal.md)
+
 ## 自建
 
 * [SSH](zi-jian/ssh.md)
 * [Python](zi-jian/python.md)
 * [FFMPEG](zi-jian/ffmpeg.md)
 * [AutoDL](zi-jian/autodl.md)
-
-## Serverless AI
-
-* [Modal](serverless-ai/modal.md)
 
 ## Others
 
