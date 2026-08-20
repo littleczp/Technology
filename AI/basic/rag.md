@@ -192,7 +192,13 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 </details>
 
+<details>
 
+<summary>RAG 中的 "Lost in the Middle" 是什么问题？</summary>
+
+Lost in the Middle（中间信息丢失）指的是 LLM 在处理长上下文时存在明显的位置偏置：当相关信息位于 Context 开头或结尾时，模型通常更容易利用；当相同信息埋在大量上下文的中间位置时，模型性能会明显下降，整体呈现 U 型曲线。
+
+</details>
 
 ***
 
