@@ -225,7 +225,9 @@ GraphRAG 到底改变了什么？
 
 > 传统 RAG 的基本检索单元是 Chunk，主要通过 Query 和 Chunk 的向量相似度进行召回。它非常适合定位局部事实，但对于跨文档、跨实体、多跳关系以及整个知识库的全局性问题时，容易出现“每个 Chunk 都相关，但把这些 Chunk 放在一起仍然无法形成完整答案”的问题。
 
-GraphRAG 的核心变化是把文档中的实体和关系显式结构化，同时保留原始 Chunk 作为文本证据。索引阶段通常经历文档解析、Chunking、实体和关系抽取、Entity Resolution、Graph Construction，以及社区发现和社区摘要等步骤。
+GraphRAG 的核心是把文档中的实体和关系显式结构化，同时保留原始 Chunk 作为文本证据。
+
+索引阶段通常经历文档解析、Chunking、实体和关系抽取、Entity Resolution、Graph Construction，以及社区发现和社区摘要等步骤。
 
 查询阶段则可以先识别 Query 中的实体和意图，然后通过 Graph Traversal 沿实体关系进行多跳扩展，同时结合 Vector Search 获取原始文本证据。最终把 Graph Evidence 和 Text Evidence 一起交给 LLM。
 
