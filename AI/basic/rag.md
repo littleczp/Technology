@@ -209,6 +209,32 @@ Lost in the Middle（中间信息丢失）指的是 LLM 在处理长上下文时
 
 </details>
 
+<details>
+
+<summary>什么场景会使用图数据库或知识图谱来增强或替代传统的向量数据库检索？</summary>
+
+两者解决的问题不同。
+
+向量数据库擅长基于语义相似度从非结构化文本中召回相关内容，而知识图谱更适合实体关系明确、需要多跳查询的复杂条件组合场景。
+
+只有当业务确实存在大量稳定的实体关系和复杂关系查询时，才会引入知识图谱，否则普通的 Vector RAG 成本更低、实现也更简单。
+
+在实际 RAG 系统里，我更倾向于采用 Hybrid / GraphRAG：Vector DB 负责语义召回原始文本证据，Graph DB 负责实体关系和多跳查询，然后把两部分结果统一重排和上下文合并，最后交给 LLM 生成答案。
+
+***
+
+GraphRAG 到底改变了什么？
+
+> 传统 RAG 的基本检索单元是 Chunk，主要通过 Query 和 Chunk 的向量相似度进行召回。它非常适合定位局部事实，但对于跨文档、跨实体、多跳关系以及整个知识库的全局性问题时，容易出现“每个 Chunk 都相关，但把这些 Chunk 放在一起仍然无法形成完整答案”的问题。
+
+GraphRAG 的核心变化是把文档中的实体和关系显式结构化，同时保留原始 Chunk 作为文本证据。索引阶段通常经历文档解析、Chunking、实体和关系抽取、Entity Resolution、Graph Construction，以及社区发现和社区摘要等步骤。
+
+查询阶段则可以先识别 Query 中的实体和意图，然后通过 Graph Traversal 沿实体关系进行多跳扩展，同时结合 Vector Search 获取原始文本证据。最终把 Graph Evidence 和 Text Evidence 一起交给 LLM。
+
+所以 GraphRAG 解决的并不是“向量检索不准确”这个单一问题，而是解决**信息之间存在显式关系**的问题。
+
+</details>
+
 ***
 
 RAG 与 MCP 的关系？
