@@ -11,3 +11,7 @@
 1. 可以动态看到AI的思维过程以及对应的修改代码
 2. 稍复杂的任务需要一定的调试，但有很好的交互体验
 3. 需要删除/合并任务中的多次调用节省成本
+
+***
+
+<table><thead><tr><th width="176.904541015625">我的应用</th><th>链接</th></tr></thead><tbody><tr><td>微信表情包</td><td><a href="https://ttq7ojz5nloe.meoo.zone/">https://ttq7ojz5nloe.meoo.zone/</a></td></tr></tbody></table>

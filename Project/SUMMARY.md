@@ -10,6 +10,7 @@
 ## Serverless AI
 
 * [Modal](serverless-ai/modal.md)
+* [Cloudflare Workers](serverless-ai/cloudflare-workers.md)
 
 ## 自建
 
