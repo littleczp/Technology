@@ -200,7 +200,12 @@ Lost in the Middle（中间信息丢失）指的是 LLM 在处理长上下文时
 
 ***
 
+缓解"Lost in the Middle"：
 
+1. 控制 Context 长度，不要盲目扩大 Top-K。
+2. 使用 Reranker 提高进入 LLM 的文档质量。
+3. 对检索到的 Context 做压缩、去重和摘要。
+4. 对检索结果重新排序，把高相关文档放在 Context 的开头和结尾，低相关文档放在中间。
 
 </details>
 
