@@ -305,7 +305,7 @@ Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二�
 
 <details>
 
-<summary>RAG 系统在实际部署中可能面临哪些挑战？</summary>
+<summary><mark style="color:$danger;">RAG 系统在实际部署中可能面临哪些挑战？</mark></summary>
 
 面临挑战：数据质量和更新、检索效果、生成可靠性、系统工程、成本性能以及安全治理。
 
