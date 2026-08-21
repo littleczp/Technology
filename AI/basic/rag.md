@@ -119,32 +119,11 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 </details>
 
-<details>
-
-<summary>如何选择一个合适的嵌入模型？评估一个 Embedding 模型的好坏有哪些指标？</summary>
-
-评估和选择 Embedding 模型，通常从**业务匹配度、性能指标**、和**工程成本**三个维度来考量。
-
-***
-
-1. 准确率相关指标（核心）
-
-* NDCG@K（归一化折损累计增益）：不仅看有没有把相关文档找出来，还看排序是否合理
-* MRR@K（平均倒数排名）：关注第一个正确答案排在第几位
-* Recall@K（召回率）：前 K 个结果中，包含了多少比例的真正相关文档
-
-2. 模型本身的技术指标
-
-* MTEB 榜单排名：Massive Text Embedding Benchmark（MTEB）是目前全球公认最权威的 Embedding 模型评测大榜
-* 上下文窗口（Context Window）：单次最高支持输入多少 Token（如 512, 8k 甚至 32k）
-
-</details>
-
 ## RAG检索
 
 <details>
 
-<summary>除了基础的向量检索，你还知道哪些可以提升 RAG 检索质量的技术？</summary>
+<summary>除了基础的向量检索，还有哪些可以提升 RAG 检索质量的技术？</summary>
 
 1. 混合检索（Hybrid Search）与倒数排名融合（RRF）
 
@@ -211,7 +190,7 @@ Lost in the Middle（中间信息丢失）指的是 LLM 在处理长上下文时
 
 <details>
 
-<summary>什么场景会使用图数据库或知识图谱来增强或替代传统的向量数据库检索？</summary>
+<summary>什么场景会使用图数据库/知识图谱来增强/替代传统的向量数据库检索？</summary>
 
 两者解决的问题不同。
 
@@ -236,6 +215,91 @@ GraphRAG 的核心是把文档中的实体和关系显式结构化，同时保�
 </details>
 
 ***
+
+## RAG评估
+
+<details>
+
+<summary>如何选择一个合适的嵌入模型？评估一个 Embedding 模型的好坏有哪些指标？</summary>
+
+评估和选择 Embedding 模型，通常从**业务匹配度、性能指标**、和**工程成本**三个维度来考量。
+
+***
+
+1. 准确率相关指标（核心）
+
+* NDCG@K（归一化折损累计增益）：不仅看有没有把相关文档找出来，还看排序是否合理
+* MRR@K（平均倒数排名）：关注第一个正确答案排在第几位
+* Recall@K（召回率）：前 K 个结果中，包含了多少比例的真正相关文档
+
+2. 模型本身的技术指标
+
+* MTEB 榜单排名：Massive Text Embedding Benchmark（MTEB）是目前全球公认最权威的 Embedding 模型评测大榜
+* 上下文窗口（Context Window）：单次最高支持输入多少 Token（如 512, 8k 甚至 32k）
+
+</details>
+
+<details>
+
+<summary>如何全面地评估一个 RAG 系统的性能？</summary>
+
+需要考虑检索、生成和端到端三层，而不是只看最终结果的准确率。
+
+{% stepper %}
+{% step %}
+### 检索
+
+评估召回覆盖率、噪声比例以及排序质量。
+
+{% hint style="success" %}
+召回覆盖率（Recall）：找到的相关答案 / 所有相关答案
+
+噪声比例（Precision）：找到的不相关答案 / 所有找到的答案（TOP-K）
+
+***
+
+Recall@K 和 Hit@K 的区别？
+
+两者都衡量检索是否命中相关文档，但粒度不同。
+
+Recall@K：衡量 Top-K 对所有 Ground Truth 相关文档的覆盖程度。
+
+Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二值指标。
+{% endhint %}
+
+还需要关注检索速度和 P95/P99 的延迟。
+{% endstep %}
+
+{% step %}
+### 生成
+
+评估最终结果是否正确、答案有没有包含部分"捏造"（幻觉：是否有检索到真实的chunk）、有没有准确回答问题、内容是否完整。
+
+这里不能只看综合分数，需要根据错误类型定位是 Prompt、Context 构造、模型能力还是检索结果导致的。
+{% endstep %}
+
+{% step %}
+### 端到端
+
+评估最终任务成功率、延迟、Token消耗、单 Query 成本和吞吐量
+{% endstep %}
+{% endstepper %}
+
+</details>
+
+>
+
+<details>
+
+<summary></summary>
+
+
+
+</details>
+
+***
+
+
 
 RAG 与 MCP 的关系？
 
