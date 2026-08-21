@@ -8,7 +8,7 @@ description: Retrieval Augmented Generation
 
 <details>
 
-<summary>什么是RAG？</summary>
+<summary><mark style="color:$danger;"><strong>什么是RAG？为什么需要RAG？</strong></mark></summary>
 
 RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 + LLM 提示
 
@@ -24,13 +24,9 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
     RAG 模型通过在上下文中添加检索到的相关数据来增强用户输入，通过增加模型的基础知识来改进模型的输出。
 
-</details>
+***
 
-<details>
-
-<summary>为什么需要RAG？</summary>
-
-通用的基础大模型基本无法满足实际业务需求
+通用的基础大模型无法满足实际业务需求
 
 * 知识的局限性：模型自身的知识完全源于它的训练数据，一些实时性的、非公开的或离线的数据是无法获取到的。
 * 幻觉问题：所有的AI模型的底层原理都是基于数学概率，其模型输出实质上是一系列数值运算，当它不知道答案时，为了让句子通顺，它往往会编造事实。
@@ -123,7 +119,7 @@ RAG（检索增强生成，**Retrieval-Augmented Generation**） = 检索技术 
 
 <details>
 
-<summary>除了基础的向量检索，还有哪些可以提升 RAG 检索质量的技术？</summary>
+<summary><mark style="color:$danger;"><strong>除了基础的向量检索，还有哪些可以提升 RAG 检索质量的技术？</strong></mark></summary>
 
 1. 混合检索（Hybrid Search）与倒数排名融合（RRF）
 
@@ -291,19 +287,21 @@ Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二�
 
 </details>
 
->
-
 <details>
 
-<summary></summary>
+<summary>传统的 RAG 流程是"先检索后生成"，你是否了解一些更复杂的 RAG 范式，比如在生成过程中进行多次检索或自适应检索？</summary>
 
+传统 RAG 是"一次检索、一次生成"：适合单跳、信息比较明确的问题
 
+复杂 RAG 是：一个可以迭代、纠错和动态决策的过程。
+
+包含迭代式 RAG、自适应 RAG、纠错 RAG，以及 Agentic RAG。
+
+<table><thead><tr><th width="150.7091064453125">范式</th><th>核心思想</th><th>主要解决的问题</th></tr></thead><tbody><tr><td>Traditional RAG</td><td>一次检索 → 生成</td><td>简单知识问答</td></tr><tr><td>Iterative RAG</td><td>多轮检索 → 多轮推理</td><td>多跳问题</td></tr><tr><td>Adaptive RAG</td><td>动态决定是否/如何检索</td><td>检索效率与准确率平衡</td></tr><tr><td>Corrective RAG</td><td>检查检索结果，必要时重新检索</td><td>Retriever 召回错误</td></tr><tr><td>Agentic RAG</td><td>Agent 自主规划检索和工具调用</td><td>复杂任务、开放域、多数据源</td></tr></tbody></table>
 
 </details>
 
 ***
-
-
 
 RAG 与 MCP 的关系？
 
