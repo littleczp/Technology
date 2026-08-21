@@ -297,7 +297,7 @@ Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二�
 
 包含迭代式 RAG、自适应 RAG、纠错 RAG，以及 Agentic RAG。
 
-<table><thead><tr><th width="150.7091064453125">范式</th><th>核心思想</th><th>主要解决的问题</th></tr></thead><tbody><tr><td>Traditional RAG</td><td>一次检索 → 生成</td><td>简单知识问答</td></tr><tr><td>Iterative RAG</td><td>多轮检索 → 多轮推理</td><td>多跳问题</td></tr><tr><td>Adaptive RAG</td><td>动态决定是否/如何检索</td><td>检索效率与准确率平衡</td></tr><tr><td>Corrective RAG</td><td>检查检索结果，必要时重新检索</td><td>Retriever 召回错误</td></tr><tr><td>Agentic RAG</td><td>Agent 自主规划检索和工具调用</td><td>复杂任务、开放域、多数据源</td></tr></tbody></table>
+<table><thead><tr><th width="150.7091064453125">范式</th><th>核心思想</th><th>主要解决的问题</th></tr></thead><tbody><tr><td>Traditional RAG</td><td>一次检索 → 生成</td><td>简单知识问答</td></tr><tr><td>Iterative RAG</td><td>多轮检索 → 多轮推理</td><td>多跳问题</td></tr><tr><td>Adaptive RAG</td><td>动态决定是否/如何检索（拆解）</td><td>检索效率与准确率平衡</td></tr><tr><td>Corrective RAG</td><td>检查检索结果，必要时重新检索</td><td>Retriever 召回错误</td></tr><tr><td>Agentic RAG</td><td>Agent 自主规划检索和工具调用</td><td>复杂任务、开放域、多数据源</td></tr></tbody></table>
 
 </details>
 
