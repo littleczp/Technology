@@ -267,6 +267,10 @@ Recall@K：衡量 Top-K 对所有 Ground Truth 相关文档的覆盖程度。
 Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二值指标。
 {% endhint %}
 
+检索受到几个因素影响：Embedding 模型、切块策略、向量匹配、重排。
+
+***
+
 还需要关注检索速度和 P95/P99 的延迟。
 {% endstep %}
 
@@ -281,7 +285,7 @@ Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二�
 {% step %}
 ### 端到端
 
-评估最终任务成功率、延迟、Token消耗、单 Query 成本和吞吐量
+评估最终任务成功率、延迟、Token消耗、单 Query 成本和吞吐量。
 {% endstep %}
 {% endstepper %}
 
