@@ -26,4 +26,4 @@
 
 ## 开始制作游戏
 
-<table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td><ol><li>静态类型语言C#类似Go</li><li>组件式架构，教程/插件生态成熟</li></ol></td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td>Godot</td><td><ol><li>GDScript语法类似Python</li><li>100MB，解压即用，1秒启动</li><li>节点式架构，</li></ol></td><td>生态和教程量不如Unity</td></tr></tbody></table>
+<table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td><ol><li>静态类型语言C#类似Go</li><li>组件式架构，教程/插件生态成熟</li></ol></td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td><a href="https://godotengine.org">Godot</a></td><td><ol><li>GDScript语法类似Python</li><li>100MB，解压即用，1秒启动</li><li>节点式架构，</li></ol></td><td>生态和教程量不如Unity</td></tr></tbody></table>
