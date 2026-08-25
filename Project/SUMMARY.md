@@ -14,7 +14,6 @@
 
 ## 自建
 
-* [SSH](zi-jian/ssh.md)
 * [Python](zi-jian/python.md)
 * [FFMPEG](zi-jian/ffmpeg.md)
 * [AutoDL](zi-jian/autodl.md)
