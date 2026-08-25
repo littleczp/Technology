@@ -18,6 +18,10 @@
 * [FFMPEG](zi-jian/ffmpeg.md)
 * [AutoDL](zi-jian/autodl.md)
 
+## 记录
+
+* [从零制作一款游戏](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi.md)
+
 ## Others
 
 * [wifi](others/wifi.md)
