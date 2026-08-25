@@ -178,7 +178,7 @@ Lost in the Middle（中间信息丢失）指的是 LLM 在处理长上下文时
 缓解"Lost in the Middle"：
 
 1. 控制 Context 长度，不要盲目扩大 Top-K。
-2. 使用 Reranker 提高进入 LLM 的文档质量。
+2. [提高进入 LLM 的文档质量](rag.md#chu-le-ji-chu-de-xiang-liang-jian-suo-hai-you-na-xie-ke-yi-ti-sheng-rag-jian-suo-zhi-liang-de-ji-shu)
 3. 对检索到的 Context 做压缩、去重和摘要。
 4. 对检索结果重新排序，把高相关文档放在 Context 的开头和结尾，低相关文档放在中间。
 
@@ -309,7 +309,9 @@ Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二�
 
 面临挑战：数据质量和更新、检索效果、生成可靠性、系统工程、成本性能以及安全治理。
 
-最难：建立一套能够**持续优化**的闭环。线上问题不能只归因于“模型不好”或者“Embedding 不好”。需要通过 Trace（可观测性） 和 Evaluation（可量化的指标和测试集） 把问题拆解成 数据处理 → 检索 → 生成 → 端到端 几个阶段。通过分层评估和线上反馈闭环，持续优化 RAG。
+最难：建立一套能够**持续优化**的闭环。线上问题不能只归因于“模型不好”。
+
+需要通过 Trace（可观测性） 和 Evaluation（可量化的指标和测试集） 观测 数据处理 → 检索 → 生成 → 端到端 几个阶段。通过分层评估和线上反馈闭环，持续优化 RAG。
 
 {% stepper %}
 {% step %}
@@ -336,13 +338,18 @@ Hit@K：只判断 Top-K 是否至少命中了一个相关 Chunk，是一个二�
 
 即使检索到了正确内容，LLM 也不一定会正确使用。
 
-> 幻觉、
+1. 幻觉：[提高检索质量（Lost in Middle）](rag.md#rag-zhong-de-lost-in-the-middle-shi-shen-me-wen-ti)、"基于证据回答"（只能基于提供的 Context 回答）、生成后的事实校验（生成后增加一次验证，在检索Context里找引用）
+2. 拒绝回答机制：设置一个置信度阈值，用于医疗、法律、企业内部知识等高风险场景
+3. 完整性
 {% endstep %}
 
 {% step %}
 ### 端到端
 
+关注最终任务成功率、延迟、Token消耗、单 Query 成本和吞吐量。
 
+1. 最终任务成功率：三高（性能、并发、可用）
+2. 延迟：各阶段的耗时，关注P95和P99（Cache、快速重试）
 {% endstep %}
 {% endstepper %}
 
