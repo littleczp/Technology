@@ -367,6 +367,14 @@ RAG 在检索后会对知识进行筛选、排序和整理，将有价值的信�
 
 </details>
 
+<details>
+
+<summary>了解过哪些开源 RAG 框架比如 Ragflow？如何选择合适场景？</summary>
+
+
+
+</details>
+
 ***
 
 RAG 与 MCP 的关系？
