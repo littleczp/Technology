@@ -20,7 +20,8 @@
 
 ## 记录
 
-* [从零制作一款游戏](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi.md)
+* [从零制作一款游戏](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/README.md)
+  * [Godot](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/godot.md)
 
 ## Others
 

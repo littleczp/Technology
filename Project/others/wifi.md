@@ -70,6 +70,6 @@ https://github.com/XTLS/Xray-core/releases/download/v25.12.8/Xray-linux-arm64-v8
 
 可以开启日志进行debug
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
