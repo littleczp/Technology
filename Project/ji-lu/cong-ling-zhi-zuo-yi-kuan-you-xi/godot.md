@@ -26,8 +26,11 @@ Enemy (CharacterBody2D)
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
+## &#x20;DEBUG
 
+1. 重复打击已阵亡单位，导致血量为负数。
 
-路径问题：
+> 同一帧里有两次攻击刚好都命中同一个敌人，但敌人（节点）还没有从场景树中被移除
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+2.
+
