@@ -28,9 +28,9 @@
 
 <table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td><ol><li>静态类型语言C#类似Go</li><li>组件式架构，教程/插件生态成熟</li></ol></td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td><a href="https://godotengine.org">Godot</a></td><td><ol><li>GDScript语法类似Python</li><li>100MB，解压即用，1秒启动</li><li>节点式架构，</li></ol></td><td>生态和教程量不如Unity</td></tr></tbody></table>
 
-| 美术      |                                                                                                                               |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 学习制作    | <ol><li>学习如何画像素画/矢量绘图：</li><li>AI生图+部分调整</li></ol>                                                                            |
-| 现成美术资源包 | <ol><li><a href="https://kenney.nl/">https://kenney.nl/</a></li><li><a href="https://itch.io/">https://itch.io/</a></li></ol> |
-| 插画师、外包  |                                                                                                                               |
+| 美术      |                                                                                                                                                                                                                    |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 学习制作    | <ol><li>学习如何画像素画/矢量绘图：</li><li>AI生图+部分调整</li></ol>                                                                                                                                                                 |
+| 现成美术资源包 | <p>海外</p><ol><li><a href="https://kenney.nl/">https://kenney.nl/</a></li><li><a href="https://itch.io/">https://itch.io/</a></li></ol><p>国内</p><ol><li><a href="https://meowa.ai/">https://meowa.ai/</a></li></ol> |
+| 插画师、外包  |                                                                                                                                                                                                                    |
 
