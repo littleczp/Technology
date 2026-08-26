@@ -25,3 +25,9 @@ Enemy (CharacterBody2D)
 添加子节点：占位方块（颜色），ColorRect
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+
+
+路径问题：
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
