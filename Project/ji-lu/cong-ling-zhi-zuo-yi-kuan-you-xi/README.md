@@ -56,7 +56,17 @@ AI：核心玩法、内容与结构、叙事与世界观、美术与音效、系
    4. 新手引导：是否支持跳过
 {% endhint %}
 
-<table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td><ol><li>静态类型语言 C# 类似 Go</li><li>组件式架构，教程/插件生态成熟</li></ol></td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td><a href="https://godotengine.org">Godot</a></td><td><ol><li>GDScript 语法类似 Python</li><li>100MB，解压即用，1秒启动</li><li>节点式架构，</li></ol></td><td>生态和教程量不如Unity</td></tr></tbody></table>
+{% code title="开发手册评估Prompt" overflow="wrap" %}
+```
+请全面的阅读这个PRD，结合上述的核心游戏要素进行评估，是否足够作为一个好的开发手册开始制作游戏？
+比如：游戏的核心玩法是否有趣、关卡流程设计是否把控到位、叙事和世界观是否需要补足/替换等等。
+将所有核心问题进行剖析和给出建议。
+```
+{% endcode %}
+
+***
+
+<table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td>包含多种组件和教程，生态成熟</td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td><a href="https://godotengine.org">Godot</a></td><td>100MB，解压了直接用</td><td>生态和教程量不如Unity</td></tr></tbody></table>
 
 | 游戏资源与资产的获取 |                                                                                                                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
