@@ -1,4 +1,4 @@
 # 导入素材
 
-.aseprite 文件：[https://novaboard.app/](https://novaboard.app/)
+查看 .aseprite 文件动画特效：[https://novaboard.app/](https://novaboard.app/)&#x20;
 
