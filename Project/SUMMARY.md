@@ -22,7 +22,8 @@
 
 * [从零制作一款游戏](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/README.md)
   * [Godot](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/godot.md)
-  * [美术](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/mei-shu.md)
+  * [自制素材](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/zi-zhi-su-cai.md)
+  * [导入素材](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/dao-ru-su-cai.md)
 
 ## Others
 
