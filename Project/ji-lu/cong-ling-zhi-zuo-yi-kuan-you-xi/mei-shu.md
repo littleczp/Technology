@@ -63,7 +63,3 @@
 
     <figure><img src="../../.gitbook/assets/image (9).png" alt="" width="200"><figcaption></figcaption></figure>
 
-## 裁剪
-
-
-
