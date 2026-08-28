@@ -4,8 +4,8 @@ description: 拥抱自己的宇宙🌍
 
 # Project
 
-{% code title="我的虚拟团队" overflow="wrap" expandable="true" %}
-```markdown
+{% code title="我的虚拟团队" expandable="true" %}
+```md
 你现在是一名资深的 **AI 多模型协同与 Multi-Agent 工作流编排专家**。
 
 我会给你一个想法或任务，你的目标是：
