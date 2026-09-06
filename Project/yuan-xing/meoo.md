@@ -13,3 +13,15 @@
 ***
 
 <table><thead><tr><th width="176.904541015625">我的应用</th><th>链接</th></tr></thead><tbody><tr><td>微信表情包</td><td><a href="https://ttq7ojz5nloe.meoo.zone/">https://ttq7ojz5nloe.meoo.zone/</a></td></tr></tbody></table>
+
+
+
+## 替代
+
+***
+
+[https://www.weavefox.cn/](https://www.weavefox.cn/)
+
+* 快速生成原型：前端UI（体验交互）、验证，同时提供一些思路
+* 稍复杂的需求容易出现bug
+* 比较难满足精细化控制与定制化需求

@@ -10,7 +10,6 @@
 
 * [bolt.new](yuan-xing/bolt.new.md)
 * [meoo](yuan-xing/meoo.md)
-* [WeaveFox](yuan-xing/weavefox.md)
 
 ## Serverless AI
 
