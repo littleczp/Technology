@@ -31,4 +31,3 @@
 ## Others
 
 * [wifi](others/wifi.md)
-* [vpn](others/vpn.md)
