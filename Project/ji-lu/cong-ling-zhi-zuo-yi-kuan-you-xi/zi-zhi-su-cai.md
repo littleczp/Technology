@@ -2,6 +2,9 @@
 
 ## AI生图
 
+1. image2
+2. nano banana
+
 ## 扣除绿幕
 
 1. 使用软件（PS、[GIMP](https://www.gimp.org/)、在线网站）
@@ -48,6 +51,3 @@
 2. 使用游戏引擎导入后缩放
 {% endstep %}
 {% endstepper %}
-
-2. 游戏引擎
-3. AI抠图
