@@ -19,8 +19,9 @@
 ## 记录
 
 * [从零制作一款游戏](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/README.md)
-  * [自制素材](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/zi-zhi-su-cai.md)
-  * [导入素材](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/dao-ru-su-cai.md)
+  * [游戏设计大纲](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-she-ji-da-gang.md)
+  * [游戏开发手册](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-kai-fa-shou-ce.md)
+  * [自制美术素材](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/zi-zhi-mei-shu-su-cai.md)
 
 ## Others
 

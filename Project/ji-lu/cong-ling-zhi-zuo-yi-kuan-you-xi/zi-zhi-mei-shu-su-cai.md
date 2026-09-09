@@ -1,9 +1,11 @@
-# 自制素材
+# 自制美术素材
 
 ## AI生图
 
-1. image2
+1. Image2
 2. nano banana
+
+
 
 ## 扣除绿幕
 
