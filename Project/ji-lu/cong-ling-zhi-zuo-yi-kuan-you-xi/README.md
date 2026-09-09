@@ -104,9 +104,18 @@ AI：需要在资源循环、建造策略、生存压力、成长曲线四个维
 ```
 {% endcode %}
 
-AI生成《游戏设计》大纲后，需要人工检查和修改。
+AI生成《游戏设计》大纲后，需要人工检查和修改。\
+大纲应该包含 核心玩法、内容与结构、叙事与世界观、美术风格、游戏简介
 
 ***
+
+## 游戏开发手册
+
+
+
+***
+
+## 游戏制作
 
 <table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td>包含多种组件和教程，生态成熟</td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td><a href="https://godotengine.org">Godot</a></td><td>100MB，解压了直接用</td><td></td></tr></tbody></table>
 
