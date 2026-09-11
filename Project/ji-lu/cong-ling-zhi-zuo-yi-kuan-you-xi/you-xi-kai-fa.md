@@ -9,9 +9,15 @@
 
 
 
-可用资源
-
-<table><thead><tr><th width="75">模式</th><th width="569">可选项</th><th>备选项</th></tr></thead><tbody><tr><td>file</td><td><ol><li>codex</li><li>claude</li><li>cursor</li></ol></td><td></td></tr><tr><td>chat</td><td><ol><li>chatgpt plus：gpt-6 Astra、gpt 5.6 Sol、gpt 5.6 Terra、gpt 5.6 Luna</li><li>claude普通订阅：claude opus5、极少量claude fable5</li><li>gemini 3.8 Flash</li><li>deepseek v4.1 Flash、kimi k3</li></ol></td><td>qwen3.7、豆包</td></tr><tr><td>tool</td><td><ol><li>AI生图：Image2、Banana 2 Lite、Stable Diffusion</li><li>剪映</li><li>即梦</li></ol></td><td>其他推荐的免费工具</td></tr></tbody></table>
+{% code title="可用资源" %}
+```md
+| 模式 | 可选项 | 备选项 |
+| :--- | :--- | :--- |
+| file | 1. codex<br>2. claude<br>3. cursor | |
+| chat | 1. chatgpt plus: gpt-6 Astra、gpt 5.6 Sol、gpt 5.6 Terra、gpt 5.6 Luna<br>2. claude普通订阅: claude opus5、极少量claude fable5<br>3. gemini 3.8 Flash<br>4. deepseek v4.1 Flash、kimi k3 | qwen3.7、豆包 |
+| tool | 1. AI生图: Image2、Banana 2 Lite、Stable Diffusion<br>2. 剪映<br>3. 即梦 | 其他推荐的免费工具 |
+```
+{% endcode %}
 
 ## 制作游戏原型或小型游戏
 
