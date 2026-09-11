@@ -9,6 +9,10 @@
 
 
 
+可用资源
+
+<table><thead><tr><th width="75">模式</th><th width="569">可选项</th><th>备选项</th></tr></thead><tbody><tr><td>file</td><td><ol><li>codex</li><li>claude</li><li>cursor</li></ol></td><td></td></tr><tr><td>chat</td><td><ol><li>chatgpt plus：gpt-6 Astra、gpt 5.6 Sol、gpt 5.6 Terra、gpt 5.6 Luna</li><li>claude普通订阅：claude opus5、极少量claude fable5</li><li>gemini 3.8 Flash</li><li>deepseek v4.1 Flash、kimi k3</li></ol></td><td>qwen3.7、豆包</td></tr><tr><td>tool</td><td><ol><li>AI生图：Image2、Banana 2 Lite、Stable Diffusion</li><li>剪映</li><li>即梦</li></ol></td><td>其他推荐的免费工具</td></tr></tbody></table>
+
 ## 制作游戏原型或小型游戏
 
 {% code title="简易游戏开发规划Prompt" %}
@@ -227,3 +231,4 @@ Bug 属于原任务时，在原任务执行记录中追加"尝试/原因/修复/
 - 优化总目标：以最合理的模型与工具组合、最少的不必要调用、最少的人工搬运次数、最高的并行效率，获得最高质量且可验收的最终结果。
 ````
 {% endcode %}
+
