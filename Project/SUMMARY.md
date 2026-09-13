@@ -5,6 +5,7 @@
 ## AI
 
 * [Multi Agent](<README (1).md>)
+* [Lovart](ai/lovart.md)
 
 ## 原型
 
