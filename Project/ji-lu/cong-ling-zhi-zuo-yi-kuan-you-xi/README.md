@@ -1,29 +1,5 @@
 # 从零制作一款游戏
 
-有一天你突发奇想："现在的 AI 这么强大，我能不能用 AI 从零制作一款游戏出来呢"？
-
-恰好，我就有这么一天，于是在深夜开始了我的游戏制作。
-
-
-
-## 如何制作游戏？
-
-通过多个 AI 模型，从零了解一款游戏有哪些组成部分。
-
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="188"><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (10).png" alt="" width="372"><figcaption></figcaption></figure>
-
-{% hint style="danger" %}
-我想要从零制作一款可以上架steam的游戏，我该如何开始？
-
-
-
-AI：初始目标要小一些，不要上来就做开放世界和3A
-
-但我们就要挑战高难度，我们不仅要做3A大作，甚至要做4A大作：AI代码、AI美术、AI音乐、AI动画。
-{% endhint %}
-
 ## 游戏要素
 
 {% hint style="info" %}
