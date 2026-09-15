@@ -43,7 +43,7 @@
 
 ***
 
-{% code title="协作文档Prompt（无参考版本）" overflow="wrap" %}
+{% code title="协作文档Prompt（有参考版本）" overflow="wrap" %}
 ```md
 垂直切片已经能跑了。现在补一份最小协作文档，供互相看不见上下文的 agent 使用。
 
