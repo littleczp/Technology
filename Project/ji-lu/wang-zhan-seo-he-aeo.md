@@ -2,13 +2,13 @@
 
 AEO（AI Engine Optimization）：依赖底层的搜索 API → AI 总结 + 检索增强生成（RAG）
 
-
-
 {% code title="网站SEO和AEO Prompt" overflow="wrap" %}
 ```md
 目前网站在 Google、Baidu 和 AI 搜索引擎（Perplexity、ChatGPT、Claude）中均未建立有效认知与收录。
 
 请以“资深 Web 架构师与 SEO/AEO 专家”的身份，帮我深度审查当前仓库代码，重点关注以下几个方面，并指出缺陷和具体的修改方案：
+
+0. 参考
 ​
 1. 爬虫与站点地图：
  - 检查 `/robots.txt`，确保允许谷歌、百度、以及主要 AI 爬虫（GPTBot、PerplexityBot、ClaudeBot 等）正常访问。
@@ -56,4 +56,3 @@ AEO（AI Engine Optimization）：依赖底层的搜索 API → AI 总结 + 检�
 ## AEO优化
 
 1. 加入结构化 JSON-LD
-
