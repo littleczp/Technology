@@ -27,6 +27,7 @@
   * [游戏开发-策划](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-kai-fa-ce-hua/README.md)
     * [游戏开发-本地agent](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-kai-fa-ce-hua/you-xi-kai-fa-ben-di-agent.md)
   * [游戏美术制作](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-mei-shu-zhi-zuo/README.md)
+    * [真实地图还原](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-mei-shu-zhi-zuo/zhen-shi-di-tu-huan-yuan.md)
     * [自制美术素材](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-mei-shu-zhi-zuo/zi-zhi-mei-shu-su-cai.md)
   * [游戏音乐制作](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-yin-yue-zhi-zuo.md)
 * [网站SEO和AEO](ji-lu/wang-zhan-seo-he-aeo.md)
