@@ -50,6 +50,7 @@ AEO（AI Engine Optimization）：依赖底层的搜索 API → AI 总结 + 检�
 ## SEO优化
 
 1. Google：[search.google.com/search-console](https://search.google.com/search-console) 中登记域名（Cloudfare可关联直接认证）
+2. Google 中添加站点地图：[https://nonocai.com/sitemap.xml](https://nonocai.com/sitemap.xml)
 
 
 
