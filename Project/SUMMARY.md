@@ -24,7 +24,6 @@
   * [垂直切片规划](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/chui-zhi-qie-pian-gui-hua.md)
   * [垂直切片实现](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/chui-zhi-qie-pian-shi-xian.md)
   * [最小协作文档](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/zui-xiao-xie-zuo-wen-dang.md)
-  * [游戏音乐制作](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/you-xi-yin-yue-zhi-zuo.md)
 * [网站SEO和AEO](ji-lu/wang-zhan-seo-he-aeo.md)
 
 ## Others
