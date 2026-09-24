@@ -49,16 +49,3 @@ AI：需要在资源循环、建造策略、生存压力、成长曲线四个维
 * 高级资源：如矿石、香料等，用于解锁后期内容
 * 经济杠&#x6746;**：**&#x5229;息（存款产生收益）、资源转换（低级资源兑换高级资源）、市场波动（NPC商人、玩家交易）
 {% endhint %}
-
-***
-
-## 游戏制作
-
-<table><thead><tr><th width="115.92919921875">游戏引擎</th><th>优</th><th>劣</th></tr></thead><tbody><tr><td>Unity</td><td>包含多种组件和教程，生态成熟</td><td><ol><li>安装困难，5GB+</li><li>配置要求较高</li></ol></td></tr><tr><td><a href="https://godotengine.org">Godot</a></td><td>100MB，解压了直接用</td><td></td></tr></tbody></table>
-
-| 游戏资源与资产的获取 |                                                                                                                                                            |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学习制作       | <ol><li>学习如何画像素画/矢量绘图：</li><li>AI生图+部分调整</li></ol>                                                                                                         |
-| 现成美术资源包    | <p>海外</p><ol><li><a href="https://kenney.nl/">https://kenney.nl/</a></li></ol><p>国内</p><ol><li><a href="https://meowa.ai/">https://meowa.ai/</a></li></ol> |
-| 平台         | <p>3D模型：<a href="https://www.meshy.ai/">https://www.meshy.ai/</a><br>3D动画：<a href="https://mesh2motion.org/">https://mesh2motion.org/</a><br>3D懂</p>       |
-| 插画师、外包     |                                                                                                                                                            |
