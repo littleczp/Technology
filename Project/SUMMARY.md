@@ -25,6 +25,8 @@
   * [垂直切片实现](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/chui-zhi-qie-pian-shi-xian.md)
   * [最小协作文档](ji-lu/cong-ling-zhi-zuo-yi-kuan-you-xi/zui-xiao-xie-zuo-wen-dang.md)
 * [AI Product](ji-lu/ai-product.md)
+* [AI短剧](ji-lu/ai-duan-ju.md)
+* [AI商品推广短剧](ji-lu/ai-shang-pin-tui-guang-duan-ju.md)
 * [网站SEO和AEO](ji-lu/wang-zhan-seo-he-aeo.md)
 
 ## Others
