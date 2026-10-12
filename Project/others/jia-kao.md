@@ -1,20 +1,31 @@
 # 驾考
 
-<table data-search="false"><thead><tr><th>科目一Q</th><th>A</th><th>补充</th></tr></thead><tbody><tr><td>机动车急弯</td><td>最高速度30km/h</td><td></td></tr><tr><td>高速路同方向左侧车道</td><td>100~120km/h</td><td>三条道的最左侧：110~120km/h</td></tr><tr><td>高速路能见&#x3C;200米</td><td>&#x3C;60km/h</td><td></td></tr><tr><td>距离加油站/公交站/消防队</td><td>&#x3C;30m不可以停车</td><td></td></tr><tr><td>驾驶证驾驶人信息变更</td><td>30d内申请换证</td><td></td></tr><tr><td>连续驾驶</td><td>&#x3C;4h</td><td></td></tr><tr><td>违反交通<mark style="color:red;">法律法规</mark></td><td>属于违法行为</td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+<table data-search="false"><thead><tr><th width="222">科目一Q</th><th>A</th><th>补充</th></tr></thead><tbody><tr><td>机动车急弯</td><td>最高速度30km/h</td><td></td></tr><tr><td>高速路同方向左侧车道</td><td>100~120km/h</td><td>三条道的最左侧：110~120km/h，中间为90km~120km/h</td></tr><tr><td>高速路能见&#x3C;200米</td><td>&#x3C;60km/h</td><td>&#x3C;100米时要&#x3C;40km/h</td></tr><tr><td>距离加油站/公交站/消防队</td><td>&#x3C;30m不可以停车</td><td></td></tr><tr><td>驾驶证驾驶人信息变更</td><td>30d内申请换证</td><td></td></tr><tr><td>连续驾驶</td><td>&#x3C;4h</td><td></td></tr><tr><td>违反交通<mark style="color:red;">法律法规</mark></td><td>属于违法行为</td><td></td></tr><tr><td>没有中心线的限速</td><td>城市：30，公路：40</td><td>有中心线，城市：50，公路：70</td></tr><tr><td>安全故障警告标志距离</td><td>50~100m</td><td></td></tr><tr><td>驾驶证有效期满前换证</td><td>&#x3C;90d</td><td></td></tr><tr><td>饮酒后受罚</td><td>>=3个周期才能安全教育扣减</td><td></td></tr></tbody></table>
 
-科目1记忆：
+Other：
 
 1. 实习期内不能安全教育来扣减分数
 2. 科目3白天5公里，夜间3公里
 3. 科目一合格后在一日内核发驾驶证明
 4. 满12分的要参加7天法规学习
+5. 记分周期满24\~36分：道路驾驶考试（科三）
+6. 黄色网格禁止停车
+7. 交通安全公益活动，1小时为1次，1次1分
+8. 安全法规现场学习满1小时且考试合格，扣减2分
+9. 黄色标线是指示标线，保证安全时可以越线
+10.
 
 
 
-扣分合集：
+扣分：
 
 1. 污损车牌：-9
-2. 事故停车不按规定灯光和警告标志：-3
+2. 高速上违停：-9
+3. 交通事故导致轻伤后逃逸，不构成犯罪：-6
+4. 载货汽车超载、校车/客运超载<20%：-6
+5. 不按指定时间、路线、速度驾驶：-6
+6. 事故停车不按规定灯光和警告标志：-3
+7. 不避让校车：-3
 
 
 
